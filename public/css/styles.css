@@ -5,32 +5,31 @@
     box-sizing: border-box;
 }
 /*¨menu burger */
-.bars_menu{
+#bars_menu{
     width: 50px;
     height: 30px;
    transform: translate(-50%, -50%) ;
    position: absolute;
    left: 90%;
 }
-.bars_menu span {
+#bars_menu span {
     display: block;
     width: 100%;
     height: 2px;
     background-color: #9a9a9a;
     margin-top: 6px;
     transition: all 300ms;
-    transform-origin: 0px 100%;
+    transform-origin: 10px 100%;
 } 
-.bars_menu:active .linea1_bar-menu{
-    transform: rotate(45deg) translate(-8px, 1px );
+active.linea1_bar-menu{
+    transform: rotate(45deg) translate(-10px, 1px );
 }
-.bars_menu:active .linea2_bar-menu{
+active.linea2_bar-menu{
  opacity: 0;
  margin-left: -50px;
 }
-.bars_menu:active .linea3_bar-menu{    
+active.linea3_bar-menu{    
       transform: rotate(-45deg);
-      translate: (8px ,2xp);
-
+      translate: (10px ,2xp);
 
 }
