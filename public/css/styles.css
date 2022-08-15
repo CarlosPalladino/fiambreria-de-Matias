@@ -33,3 +33,17 @@ active.linea3_bar-menu{
       translate: (10px ,2xp);
 
 }
+/*----------------*/
+.icono  {
+    width: 50%;
+    border-radius: 2em;
+    padding: 5px;
+} 
+#foto {
+    width: 50%;
+    border-radius: 2em;
+padding: 5px;
+}
+/*----------------*/
+.footer {  text-align: center;
+text-decoration: none; }
