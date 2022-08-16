@@ -8,8 +8,8 @@ const controller={
 
 },
 contacto: (req,res)=> {
-    return res.render('contacto',{title:Cotactanos,
-    })
+    return res.render('contacto',{
+        title: "Contactanos"})
 }
 }
 module.exports=controller;
