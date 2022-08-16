@@ -33,6 +33,11 @@ active.linea3_bar-menu{
       translate: (10px ,2xp);
 
 }
+/*--------HEADER------*/
+
+#imagen{
+    text-align: center;
+}
 /*----------------*/
 .icono  {
     width: 50%;
