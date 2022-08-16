@@ -38,7 +38,7 @@ active.linea3_bar-menu{
 #imagen{
     text-align: center;
 }
-/*----------------*/
+/*------MAIN-------*/
 .icono  {
     width: 50%;
     border-radius: 2em;
@@ -48,6 +48,13 @@ active.linea3_bar-menu{
     width: 50%;
     border-radius: 2em;
 padding: 5px;
+}
+.caja_1{
+    text-align: center;
+}
+#muestra {width: 50%;
+    border-radius: 2em;
+    padding: 5px;
 }
 /*----------------*/
 .footer {  text-align: center;
