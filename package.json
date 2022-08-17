@@ -7,8 +7,8 @@
   "version": "1.0.0",
   "main": "src/app.js",
   "scripts": {
-    "start": "nodemon index.js",
-    "test": "node src/app.js"
+    "start": "nodemon src/app.js",
+    "test": "nodemon src/app.js"
   },
   "keywords": [],
   "author": "",
