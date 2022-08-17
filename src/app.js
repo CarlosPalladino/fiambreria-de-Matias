@@ -1,29 +1,39 @@
-const path = require('path');
-
+const {resolve} = require('path');
 const express = require('express');
+const {port, callback} = require("./modules/port")
+const public = require ("./modules/public")
+const app = express();
+const method = require("method-override")
+const session = require("express-session")
+const cookieParser = require("cookie-parser")
 
-const { application } = require('express');
-
-const app = express();  
-
-const mainRoutes= require('./routes/main.routes')
-
-const public = path.resolve(__dirname, '../public');
 
 /// app.use ///
+//public y port
+app.listen(port, callback)
+app.use(public)
 
- app.listen(2000,() => {console.log('el server esta en funcionamiento')});
+app.set ("view engine", "ejs");
+app.set('views', resolve(__dirname, 'views'));
 
- app.use('/index', mainRoutes);
- app.use(require('./routes/main.routes'))
+app.use(method("m"))
+app.use(session({
+    secret: "nodejs", 
+    saveUninitialized: true,
+    resave: true
+}))
+app.use(cookieParser())
 
 
- app.use(express.static(public)); 
+
+//RUTAS
+app.use(require("./routes/main.routes"))
+app.use("/products",require("./routes/product.routes"))
+
+
+
 
  
 
- app.set ("view engine", "ejs");
- 
- app.set('views', path.join(__dirname, 'views'));
 
  
