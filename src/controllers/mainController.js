@@ -4,14 +4,14 @@ const controller={
     home:(req,res)=> { 
         return res.render('index',{
             title :"Las Marias",
-            styles: ["index","footer" ],
+            styles: ["header","footer" ],
             categorias:categorias()
         });
     },
     contacto: (req,res)=> {
         return res.render('contacto',{
             title: "Contactanos",
-        styles:["index", "footer"
+        styles:["header", "footer"
 
         ]})
     }
