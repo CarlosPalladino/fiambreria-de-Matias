@@ -1,9 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<% - include('./includes/head.ejs')%> 
+<%-include('./includes/head.ejs')%> 
 </head>
 <body>
-    <h5>si se ve , funciona</h5>
+    <header>
+        <%-include('./includes/header.ejs') %>
+    </header>
+<main>
+<article>
+ </article>
+
+
+    <i class="fa-brands fa-square-whatsapp"></i>
+    <i class="fa-brands fa-instagram"></i>
+
+
+
+<h4 id ="lugar">Av San martin . .. </h4> <i class="fa-solid fa-location-dot"></i>
+
+
+  <article id="form">
+<form action="" method="post" enctype="multipart/form-data ">
+<label for="nombre y apellido">nombre y apellido</label>
+<input type="text" name="nombre y apellido" id="relleno"> 
+    <label for="telefono de contacto">telefono de contacto</label>
+    
+
+    <input type="number" min="1" id="relleno">
+
+    <label for="mensaje ">dejanos tu mensje </label>
+<input type="text" id="relleno"> 
+
+<button type="submit" name="enviar" id="btn">Enviar</button>
+
+
+</form>
+</article>
+  <article id="image"> 
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d410.179481336331!2d-58.53409555092274!3d-34.66894772648159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc94a1e43d96f%3A0x62d5a1ed641ad474!2sDistribuidora%20las%20marias!5e0!3m2!1ses-419!2sar!4v1660774914031!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </article>
+
+<h4 id="list" >Descarga el listado de productos </h4>
+
+
+</main>
 </body>
 </html>

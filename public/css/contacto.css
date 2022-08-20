@@ -1,0 +1,26 @@
+.whatsapp {
+    padding: 10px;
+    border-radius: 50px;
+    background: var(--ast-global-color-4);
+}
+#list {
+    width: 90%;
+    margin: auto;
+    padding: 2em;
+    border-radius: 30px;
+    background: #ededed;
+}
+#form {
+    display: grid;
+    justify-items: start;
+    justify-content: center;
+    background-color:#ededed;
+}
+#relleno {
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 14px;
+    border: 1px solid;
+    font-size: 14px;
+ 
+}
