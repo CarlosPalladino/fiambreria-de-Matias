@@ -1,0 +1,14 @@
+[
+    {
+        "id":1,
+        "name":"Matambre de Pollo",
+        "description":"Matambre de pechuga de pollo realizado Artesanalmente",
+        "marca":"cuchuflito",
+        "image":"fotomuestra.jpg",
+        "category":"Matambres",
+        "sub-categoria":"de Pollo",
+        "peso":2,
+        "price":2000,
+        "destacado": false
+    }
+]

@@ -1,15 +1,19 @@
+const {categorias} = require('../models/catsModel')
+
 const controller={ 
-    index:(req,res)=> { 
+    home:(req,res)=> { 
         return res.render('index',{
-            title :"Las marias",
-            styles: ["index", ]
+            title :"Las Marias",
+            styles: ["index","footer" ],
+            categorias:categorias()
         });
+    },
+    contacto: (req,res)=> {
+        return res.render('contacto',{
+            title: "Contactanos",
+        styles:["index", "footer"
 
-
-},
-contacto: (req,res)=> {
-    return res.render('contacto',{
-        title: "Contactanos"})
-}
+        ]})
+    }
 }
 module.exports=controller;
