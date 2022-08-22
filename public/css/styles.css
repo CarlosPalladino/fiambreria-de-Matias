@@ -1,0 +1,21 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+main h4{
+    text-align: center;
+
+
+
+}
+
+#listado {
+text-align: center;
+background-color: #9C211C;
+box-shadow: 0px 1px 6px -1px rgb(0 0 0 / 75%);
+color: white;
+}

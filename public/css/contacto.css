@@ -10,7 +10,7 @@
     border-radius: 30px;
     background: #ededed;
 }
-#form {
+#back {
     display: grid;
     justify-items: start;
     justify-content: center;
@@ -23,4 +23,15 @@
     border: 1px solid;
     font-size: 14px;
  
+}
+#form {
+    display: grid;
+    place-items: flex-start;
+}
+#btn { 
+    background-color: #9C211C;
+    color: white;
+    padding: 5px;
+border-radius: 7px;
+
 }
