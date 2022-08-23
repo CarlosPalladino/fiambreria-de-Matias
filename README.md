@@ -1,2 +1,17 @@
-Bienvenido a nuestro repositorio !
-este proyecto esta pensado para un cliente que tiene una distribuidora de Fiambres. El desea crear su primer sitio web para hacer que su enprendimiento tome un nuevo rumbo , haciendo que este atraiga a nuevos clientes y mejorara su atención
+## Titulo del Proyecto: 
+
+
+Las Marias
+
+
+## Indice
+[documentos](doc)
+  1. [Tematica](/doc/tematica.md)
+  2. [Referentes](/doc/referentes.md)
+  3. [Equipo](/doc/equipo)
+  4. [Diseño](/doc/diseño)
+      - [Wireframe](/doc/diseño/wireframe.md)
+      - [Tipografias](/doc/diseño/tipografias.md)
+      - [Colores](/doc/diseño/colores.md)
+      - [Marca](/doc/diseño/marca.md)
+      - [Boceto](/doc/diseño/boceto.md)
