@@ -11,7 +11,5 @@ Las Marias
   3. [Equipo](/doc/equipo)
   4. [Diseño](/doc/diseño)
       - [Wireframe](/doc/diseño/wireframe.md)
-      - [Tipografias](/doc/diseño/tipografias.md)
-      - [Colores](/doc/diseño/colores.md)
       - [Marca](/doc/diseño/marca.md)
       - [Boceto](/doc/diseño/boceto.md)
