@@ -1,40 +1,83 @@
 *{
     margin: 0;
     padding:0;
-    box-sizing:border-box
+    box-sizing:border-box;
+    font-family: "Montserrat";
 }
 header{
-    padding: 0 5px;
+    padding: 5px;
+    gap: 10px;
     width:100vw;
-    height:50px;
+    
     display: flex;
     flex-wrap:wrap;
     align-items: center;
     justify-content: space-between;
-    background-color:aqua
+    background-color:#FFF0D4 ;
+    border-bottom: 0.5px solid #9C211C
+    
 }
-.header-logo{
-    height: 40px;
+
+.search-form{
+    height: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50px;
+    border: 0.5px solid #9C211C ;
+    background-color: white
+
 }
-/*.search-form{}
-.search-form input{}
-.search-form button{}*/
+.search-form input{
+    
+    width: 185px;
+    height: 100%;
+    border: none;
+    background-color: white;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    padding:10px
+}
+.search-form button{
+    width: 30px;
+    height: 100%;
+    border: none;
+    color: #FFF0D4;;
+    
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+
+    padding: 3px;
+    background-color: #9C211C
+
+}.search-form button i{
+    font-size: 18px
+}
+
 
 .burger-menu{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 5px;
-    margin: 4px 10px;
+    
 }
 .burger-menu a{
     text-align:center;
-    color:#f9f9f9;;
-    background-color: #57CC99;
+    color:#FFF0D4;;
+    background-color: #9C211C ;
     box-sizing: border-box;
     height:32px;
     font-size: 18px;
     width: 32px;
-    padding-top:6.5px;
+    padding-top:6px;
     border-radius: 3px
+}
+.logo-nav{
+flex-basis: 100%;
+align-content: center;
+text-align: center
+
+}
+.header-logo{
+    height: 60px;
 }
