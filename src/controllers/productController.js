@@ -2,9 +2,9 @@ const {index, one, create, write}= require("../models/productsModel")
 const {categorias} = require('../models/catsModel')
 const controller={ 
     todasCategorias:(req,res)=> {  //HAY QUE REQUERIR DESDE CATEGORIAS EL MODELO
-        return res.render('product/todasCategorias',{
+        return res.render('products/todasCategorias',{
             title :"Nuestros Productos",
-            styles: ["header","footer" ],
+            styles: ["header","footer", ],
             categorias: categorias()
         });
     },

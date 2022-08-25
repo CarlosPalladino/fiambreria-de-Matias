@@ -1,46 +1,82 @@
-
 <%-include('./includes/head.ejs') %>
 
-        <%- include('./includes/header.ejs') %>
-    
-    <main>
-    <h2> BANNER CARROUSEL PRINCIPAL</h2>
-    <!--
-        ACA VA A IR EL CARRUSEL PRINCIPAL
-    -->
-    <section class="categorias">
-        <h3 class="titular">NUESTROS PRODUCTOS</h3>
-        <h3 class="titular">CARROUSEL CATEGORIAS</h3>
-        <!--
-            ACA VA EL CARROUSEL DE LAS CATEGORIAS
-        -->
-    </section>
-   
-    <nav class="contacto-nav">
-        <a class="boton" href="/contacto">CONTACTANOS</a> 
+    <%- include('./includes/header.ejs') %>
+
+        <main>
+            <h2> BANNER CARROUSEL PRINCIPAL</h2>
+   <div id="carrousel">
+                    <ul>
+                        <li id="slide1">
+                            <img src="/images/banner.jpg" alt=""> 
+                        </li>
+                        <li id="slide2">
+                        <li>
+                            <img src="/images/banner2.jpg" alt="">
+                        </li>
+                        <li id="slide3">
+                        <li>
+                            <img src="/images/banner3.jpg" alt="">
+                        </li>
 
 
-        <a  class="whatsapp-icon" href="https://wa.me/5491151084159?text=Hola%20vi%20su%20pagina%20web,%20me%20gustaria%20hacerles%20una%20pregunta..." target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-    </nav>
+                    </ul>
+                    <ul class="menu">
+                        <li>
+                            <a hre="#slide1"> </a>
+                        </li>
+                        <li>
+                            <a hre="#slide2"> </a>
+
+                        </li>
+                        <li>
+                            <a hre="#slide3"> </a>
+
+                        </li>
+                    </ul>
+                </div>
+            <section class="category">
+
+<a href="/products/categorias" class ="product_cart">Nuestros productos</a>
 
 
-     
-    <section class="destacados">
-        <h3 class="titular">'-.-'-.-'-DESTACADOS-'-.-'-.-'</h3>
-        <article class="item-article">
-            <a href="/products/detail/"><img class="item-image" src="/images/product-images/fotomuestra.jpg"></a>
-            <a><h4 class="item-name">Nombre del producto</h4></a>
-            <h4 class="item-price">$2.500,00</h4>
-        </article>
-    </section>
-    <nav class="download-nav" >
-        <a class="download"  href="/files/listado-precios/prueba-1.xls" download="Listado Agosto 2022.xls">¡ Descarga nuestro listado completo!</a>
-    </nav>
-    
-    </main>
+                <h3 class="titular">CARROUSEL CATEGORIAS</h3>
+
+                
+
+
+            </section>
+
+            <nav class="contacto-nav">
+                <a class="boton" href="./contacto">CONTACTANOS</a>
+
+
+                <a class="whatsapp-icon"
+                    href="https://wa.me/5491151084159?text=Hola%20vi%20su%20pagina%20web,%20me%20gustaria%20hacerles%20una%20pregunta..."
+                    target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            </nav>
 
 
 
-</body>
+            <section class="destacados">
+                <h3 class="titular">'-.-'-.-'-DESTACADOS-'-.-'-.-'</h3>
+                <article class="item-article">
+                    <a href="/products/detail/"><img class="item-image"
+                            src="/images/product-images/fotomuestra.jpg"></a>
+                    <a>
+                        <h4 class="item-name">Nombre del producto</h4>
+                    </a>
+                    <h4 class="item-price">$2.500,00</h4>
+                </article>
+            </section>
+            <nav class="download-nav">
+                <a class="download" href="/files/listado-precios/prueba-1.xls" download="Listado Agosto 2022.xls">¡
+                    Descarga nuestro listado completo!</a>
+            </nav>
 
-</html>
+        </main>
+
+
+
+        </body>
+
+        </html>

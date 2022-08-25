@@ -1,0 +1,1 @@
+Soy Carlos Palladino, tengo 23 años . Soy oriundo de La tablada , Argentina. Actualmente estoy atreavensando mis primeros proyectos en el mundo It, además de la programación. Estudio diseño gráfico en la UBA .

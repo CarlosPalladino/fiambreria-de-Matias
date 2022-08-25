@@ -12,6 +12,7 @@ const controller={
         return res.render('contacto',{
             title: "Contactanos", 
             styles:["header", "footer", "contacto"]})
-    }
+    },
+ 
 }
 module.exports=controller;

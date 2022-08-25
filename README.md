@@ -1,3 +1,0 @@
-## [ EQUIPO ]( )
-
-## [wirframe]
