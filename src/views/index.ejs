@@ -59,14 +59,20 @@
 
             <section class="destacados">
                 <h3 class="titular">'-.-'-.-'-DESTACADOS-'-.-'-.-'</h3>
-                <article class="item-article">
-                    <a href="/products/detail/"><img class="item-image"
-                            src="/images/product-images/fotomuestra.jpg"></a>
-                    <a>
-                        <h4 class="item-name">Nombre del producto</h4>
+ <% products.forEach(element => { %>
+  
+                <article class="item-article" >
+                    <a href="/products/detail/<%=element.id %>"><img class="item-image"
+                            src="/images/product-images/<%= element.images%>">
+                            
+                            
                     </a>
+                        <h4 class="item-name">Nombre del producto</h4>
+                
                     <h4 class="item-price">$2.500,00</h4>
                 </article>
+ <% }) %>
+
             </section>
             <nav class="download-nav">
                 <a class="download" href="/files/listado-precios/prueba-1.xls" download="Listado Agosto 2022.xls">¡

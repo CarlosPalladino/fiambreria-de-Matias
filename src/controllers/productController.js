@@ -33,13 +33,13 @@ const controller={
         })
     },
     detail:(req,res)=>{ //LISTO
-        let product = one(parseInt(req.params.idProduct))
+        let product = one(parseInt(req.params.id))
         if(!product){
-        return res.redirect('/products/')
+        return res.redirect('/')
         }
         return res.render("products/detail",{
-            title:product.toUpperCase(),
-            styles:["header","footer"],
+            title:product.name.toUpperCase(),
+            styles:["header","footer", "detail"],
             product:product
         })
     },

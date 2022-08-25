@@ -1,11 +1,13 @@
 const {categorias} = require('../models/catsModel')
-
+const {index} = require ('../models/productsModel')
 const controller={ 
     home:(req,res)=> { 
+        let products = index()
         return res.render('index',{
             title :"Las Marias",
             styles: ["index","header","footer" ],
-            categorias:categorias()
+            categorias:categorias(),
+            products: products 
         });
     },
     contacto: (req,res)=> {
