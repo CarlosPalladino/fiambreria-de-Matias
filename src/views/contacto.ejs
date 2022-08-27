@@ -1,47 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<%-include('./includes/head.ejs')%> 
-</head>
-<body>
-    <header>
-        <%-include('./includes/header.ejs') %>
-    </header>
-<main>
-<article>
- </article>
 
+   <%-include('./includes/head.ejs')%> 
+
+<body>
+   <%-include('./includes/header.ejs') %>
+
+<main>
+
+<figure>
+  <!-- BANNER DE CONTACTO (PUEDE SER UNA SOLA FOTO DEL LOCAL, O MAS DE UNA QUE TAMBIEN SE VEA EL DEPOSITO)-->
+</figure>
 
    <!--<i class="fa-brands fa-square-whatsapp"></i>
     <i class="fa-brands fa-instagram"></i> -->
 
 
+<section class="contacto-container">
+  <nav class="tel-insta">
+    <a 
+    href="https://wa.me/5491151084159?text=Hola%20vi%20su%20pagina%20web,%20me%20gustaria%20hacerles%20una%20pregunta..."
+    target="_blank"><i class="fa-brands fa-whatsapp"></i> +54 11-5108-4159
+    </a>
+    <a href="https://www.instagram.com/la_maria_fiambres_y_harinas/" target="_blank"><i class="fa-brands fa-instagram"></i> Las Marias Distribuidora</a>
+  </nav>
 
-<h4 id ="lugar">Av. Gral. San Martín 3417,  Lomas del Mirador</h4> <i class="fa-solid fa-location-dot"></i>
+  <h5 class="mail"><i class="fa-solid fa-envelope"></i> lm.distribuidora@hotmail.com</h5>
+
+  <h5 class="adress"><i class="fa-solid fa-location-dot"></i> Av. Gral. San Martín 3417,  Lomas del Mirador</h5> 
+
+  <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d410.179481336331!2d-58.53409555092274!3d-34.66894772648159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc94a1e43d96f%3A0x62d5a1ed641ad474!2sDistribuidora%20las%20marias!5e0!3m2!1ses-419!2sar!4v1660774914031!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
 
 
-  <article id="back">
-<form action="" method="post" enctype="multipart/form-data " id="form">
-<label for="nombre y apellido">nombre y apellido</label>
-<input type="text" name="nombre y apellido" id="relleno"> 
-    <label for="telefono de contacto">telefono de contacto</label>
+<section class="comprar">
+  <h3>¿Cómo comprar en Distribuidora Las Marias?</h3>
+  <p>Es muy fácil:</p>
+  <p>-Navegá la página o descargá la lista de precios,</p>
+  <p>-Pensá bien todo lo que te gustaría llevarte,</p>
+  <p>-Ponete en contacto con nosotros a través de Whatsapp,</p>
+  <p>-Y coordiná por ese medio para retirar el pedido</p>
+</section>
+
+  
+
+<!--<form action="" method="post" enctype="multipart/form-data " id="form">
+
+  <label for="nombre y apellido">nombre y apellido</label>
+  <input type="text" name="nombre y apellido" id="relleno"> 
+  <label for="telefono de contacto">telefono de contacto</label>
     
 
-    <input type="number" min="1" id="relleno">
+  <input type="number" min="1" id="relleno">
 
-    <label for="mensaje ">dejanos tu mensje </label>
-<input type="text" id="relleno"> 
+  <label for="mensaje ">dejanos tu mensje </label>
+  <input type="text" id="relleno"> 
 
-<button type="submit" name="enviar" id="btn">Enviar</button>
-
-
+  <button type="submit" name="enviar" id="btn">Enviar</button>
 </form>
-</article>
-  <article id="image"> 
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d410.179481336331!2d-58.53409555092274!3d-34.66894772648159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc94a1e43d96f%3A0x62d5a1ed641ad474!2sDistribuidora%20las%20marias!5e0!3m2!1ses-419!2sar!4v1660774914031!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </article>
 
-<h4 id="list" >Descarga el listado de productos </h4>
+-->
+
+<nav class="download-nav">
+  <a class="download" href="/files/listado-precios/prueba-1.xls" download="Listado Agosto 2022.xls">¡Click acá para descargar la lista de precios!</a>
+</nav>
 
 
 </main>
