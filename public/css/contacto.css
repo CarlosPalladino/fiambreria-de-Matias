@@ -60,7 +60,12 @@ section.contacto-container{
 }
 .tel-insta a{
     text-decoration: none;
-    color: black
+    color: black;
+    opacity:1;
+    transition: all 500ms
+}
+.tel-insta a:hover{
+    opacity:0.7
 }
 .tel-insta a i.fa-whatsapp{
     font-size: 16px;
