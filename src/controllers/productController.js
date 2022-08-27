@@ -42,7 +42,7 @@ const controller={
             styles:["header","footer", "detail"],
             product:product
         })
-    },
+    }, 
     create: (req,res)=> { //LISTO
         return res.render("products/create",{
             title:"Crear Producto",

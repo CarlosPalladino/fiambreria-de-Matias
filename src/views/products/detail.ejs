@@ -1,17 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
 
-    <%-include('../includes/head.ejs') %></head>
+
+
+
+    <%-include('../includes/head.ejs') %>
+
+
 <body>
     <%-include('../includes/header.ejs') %>
-<mian>
-<h4> si se ve , funciona</h4>
+        <main>
 
-    
-</mian>
+            <%= product.name %>
+
+                <div>
+
+                    <section id="producto">
+                        <picture id="pic">
+<img src="/images/product-images/<%= product.images%>" alt="foto del producto">
+                        </picture>
+
+                    </section>
+                </div>
+
+        </main>
 
 
 
 </body>
+
 </html>
