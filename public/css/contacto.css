@@ -71,6 +71,16 @@ section.contacto-container{
     text-align: center;
     padding: 1px;
 }
+.tel-insta a i.fa-instagram{
+    font-size: 16px;
+    color: white;
+    background-color: #c13584;
+    border-radius: 5px;
+    width: 18px;
+    text-align: center;
+    padding: 1px;
+
+}
 .mail{
     font-weight:600;
     font-size:14px
