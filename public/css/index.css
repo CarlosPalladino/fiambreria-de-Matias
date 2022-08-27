@@ -59,9 +59,10 @@ a.boton{
     text-align: center;
 }
  .product_cart{
+    text-transform: uppercase;
     letter-spacing: 2px;
     color: #670606;
-    font-size: 23px;
+    font-size: 18px;
     font-weight: bold;
     text-decoration: none;
     letter-spacing: 2px;

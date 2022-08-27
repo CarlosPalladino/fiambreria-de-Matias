@@ -1,3 +1,8 @@
+
+main{
+    background-color:#FFF0D4;
+    padding: 10px 0 
+}
 .whatsapp {
     padding: 10px;
     border-radius: 50px;
@@ -34,4 +39,94 @@
     padding: 5px;
 border-radius: 7px;
 
+}
+
+/* DATOS NUESTROS */
+section.contacto-container{
+    margin: 5px auto;
+    width: 95vw;;
+    height: auto;
+    display:flex;
+    flex-direction: column;
+    gap:5px
+}
+
+.tel-insta{
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+    font-weight:600;
+    font-size:14px
+}
+.tel-insta a{
+    text-decoration: none;
+    color: black
+}
+.tel-insta a i.fa-whatsapp{
+    font-size: 16px;
+    color: white;
+    background-color: #4dc247;
+    border-radius: 100px;
+    width: 18px;
+    text-align: center;
+    padding: 1px;
+}
+.mail{
+    font-weight:600;
+    font-size:14px
+}
+.mail i {
+    font-size:16px
+}
+.adress{
+    font-weight:600;
+    font-size:14px
+}
+.adress i{
+    color: red;
+    font-size: 16px
+}
+.map{
+    border: 2px solid #9C211C;
+    width:100%;
+    height: 70vw
+}
+/* COMO COMPRAR */
+section.comprar{
+    margin: 5px auto;
+    width: 95vw;;
+    height: auto;
+    display:flex;
+    flex-direction: column;
+    gap:5px
+}
+.comprar h3{
+    text-transform: uppercase;
+    color: #670606;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center
+}
+.comprar p{
+    font-size: 14px;
+    font-weight: 500
+}
+
+/* DESCARGA LISTA */
+nav.download-nav{
+    display:flex;
+    justify-content: center;
+}
+a.download{
+    text-decoration:none;
+    text-align:center;
+    color:#FFF0D4;;
+    background-color: #9C211C ;
+    box-sizing: border-box;
+    padding:4px;
+    font-size: 14px;
+    width: auto;
+    border-radius: 10px;
+    text-align: center;
 }
