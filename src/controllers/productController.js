@@ -39,7 +39,7 @@ const controller={
         }
         return res.render("products/detail",{
             title:product.name.toUpperCase(),
-            styles:["header","footer", "detail"],
+            styles:["header","footer", "productDetail"],
             product:product
         })
     }, 

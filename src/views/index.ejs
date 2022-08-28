@@ -4,44 +4,44 @@
 
         <main>
             <h2> BANNER CARROUSEL PRINCIPAL</h2>
-   <div id="carrousel">
-                    <ul>
-                        <li id="slide1">
-                            <img src="/images/banner.jpg" alt=""> 
-                        </li>
-                        <li id="slide2">
-                        <li>
-                            <img src="/images/banner2.jpg" alt="">
-                        </li>
-                        <li id="slide3">
-                        <li>
-                            <img src="/images/banner3.jpg" alt="">
-                        </li>
+            <div id="carrousel">
+                <ul>
+                    <li id="slide1">
+                        <img src="/images/banner.jpg" alt="">
+                    </li>
+                    <li id="slide2">
+                    <li>
+                        <img src="/images/banner2.jpg" alt="">
+                    </li>
+                    <li id="slide3">
+                    <li>
+                        <img src="/images/banner3.jpg" alt="">
+                    </li>
 
 
-                    </ul>
-                    <ul class="menu">
-                        <li>
-                            <a hre="#slide1"> </a>
-                        </li>
-                        <li>
-                            <a hre="#slide2"> </a>
+                </ul>
+                <ul class="menu">
+                    <li>
+                        <a hre="#slide1"> </a>
+                    </li>
+                    <li>
+                        <a hre="#slide2"> </a>
 
-                        </li>
-                        <li>
-                            <a hre="#slide3"> </a>
+                    </li>
+                    <li>
+                        <a hre="#slide3"> </a>
 
-                        </li>
-                    </ul>
-                </div>
+                    </li>
+                </ul>
+            </div>
             <section class="category">
 
-<a href="/products/categorias" class ="product_cart">Nuestros productos</a>
+                <a href="/products/categorias" class="product_cart">Nuestros productos</a>
 
 
                 <h3 class="titular">CARROUSEL CATEGORIAS</h3>
 
-                
+
 
 
             </section>
@@ -60,23 +60,24 @@
 
             <section class="destacados">
                 <h3 class="titular">'-.-'-.-'-DESTACADOS-'-.-'-.-'</h3>
- <% products.forEach(element => { %>
-  
-                <article class="item-article" >
-                    <a href="/products/detail/<%=element.id %>"><img class="item-image"
-                            src="/images/product-images/<%= element.images%>">
-                            
-                            
-                    </a>
+                <% products.forEach(element=> { %>
+
+                    <article class="item-article">
+                        <a href="/products/detail/<%=element.id %>"><img class="item-image"
+                                src="/images/product-images/<%= element.images%>">
+
+
+                        </a>
                         <h4 class="item-name">Nombre del producto</h4>
-                
-                    <h4 class="item-price">$2.500,00</h4>
-                </article>
- <% }) %>
+
+                        <h4 class="item-price">$2.500,00</h4>
+                    </article>
+                    <% }) %>
 
             </section>
             <nav class="download-nav">
-                <a class="download" href="/files/listado-precios/prueba-1.xls" download="Listado Agosto 2022.xls">¡Click acá para descargar la lista de precios!</a>
+                <a class="download" href="/files/listado-precios/prueba-1.xls" download="Listado Agosto 2022.xls">¡Click
+                    acá para descargar la lista de precios!</a>
             </nav>
 
         </main>
