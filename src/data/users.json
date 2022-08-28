@@ -1,9 +1,11 @@
 [
     {
         "id": 1,
+        "username": "pini",
         "name": "Nicolas",
         "lastname": "Piñol",
         "email":"nicolas.pinol@hotmail.com",
-        "password":"12345"
+        "password":"12345",
+        "admin": true
     }
 ]
