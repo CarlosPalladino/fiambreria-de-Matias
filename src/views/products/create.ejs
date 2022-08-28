@@ -1,0 +1,42 @@
+<%-include('../includes/head.ejs') %>
+
+    <%- include('../includes/header.ejs') %>
+
+    <main>
+        <form action="/products/created" method="POST enctype=multipart/form-data">
+            <label for="name">Nombre del Producto</label>
+            <input type="text" name="name" id="name" required>
+            
+            <label for="description">Descripción del Producto</label>
+            <textarea name="description" id="description" required></textarea>
+            
+            <label for="imageS">Imagen/es del Producto</label>
+            <input type="file" name="product-image" id="image" required>
+            
+            <label for="category">Categoría del Producto</label>
+            <select name="category" id="category" required>
+                <option value="Quesos">QUESOS</option>
+                <option value="Cocidos">COCIDOS</option>
+                <option value="Jamon Crudo">JAMON CRUDO</option>
+                <option value="Salames y Salamines">SALAMES Y SALAMINES</option>
+                <option value="Pancetas">PANCETAS</option>
+                <option value="Mortadelas">MORTADELAS</option>
+                <option value="Bondiola">BONDIOLA</option>
+                <option value="Pancetas">PANCETAS</option>
+            </select>
+            
+            <label for="peso">Cuanto pesa el paquete cerrado?(en kg sin signo $ ni puntos)</label>
+            <input type="number" name="peso" id="peso" required>
+            
+            <label for="price">Precio del Producto</label>
+            <input type="number" name="price" id="price" required>
+            
+            <button type="submit">Crear Producto</button>
+        </form>
+    </main>
+
+
+
+</body>
+
+</html>
