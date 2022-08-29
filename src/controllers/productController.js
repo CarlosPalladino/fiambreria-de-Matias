@@ -46,7 +46,7 @@ const controller={
     create: (req,res)=> { //LISTO
         return res.render("products/create",{
             title:"Crear Producto",
-            styles:["header","footer"]
+            styles:["header","footer","create"]
         })
     },
     created: (req,res)=> {// LISTO

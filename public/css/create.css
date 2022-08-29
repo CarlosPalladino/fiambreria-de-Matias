@@ -1,0 +1,29 @@
+.form {
+    background-color: #FFF0D4;
+    display: flex;
+    padding: 5px;
+    margin: 5px;
+    height: 50vh;
+    border-radius: 1em;
+
+}
+
+#relleno {
+display: flex;
+border-radius: 1em;
+
+}
+#description {
+    width: 281px;
+    height: 75px; 
+       border-radius: 1em;
+}
+#btn{
+display: flex;
+background: red;
+color: white;
+position: relative;
+display: flex;
+padding: 5px;
+border-radius: 1em;
+}
