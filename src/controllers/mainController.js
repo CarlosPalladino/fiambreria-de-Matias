@@ -15,6 +15,7 @@ const controller={
             title: "Contactanos", 
             styles:["header", "footer", "contacto"]})
     },
+    
  
 }
 module.exports=controller;

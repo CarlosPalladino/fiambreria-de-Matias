@@ -10,5 +10,16 @@
         "peso":2,
         "price": 2000
         
-    }
+    },
+   { "id":2,
+    "name":"queso entero",
+    "description":"queso entero sardo",
+    "marca":"menganito",
+    "images":"fotomuestra ",
+    "category":"quesos",
+    "sub-categoria":"fresco",
+    "peso":"///",
+    "price":"///"
+}
+
 ]

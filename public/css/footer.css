@@ -4,6 +4,10 @@
     box-sizing:border-box;
     font-family: "Montserrat";
 }
-.div {
+#articles{
     background-color: #FFF0D4;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+text-decoration: none;
 }

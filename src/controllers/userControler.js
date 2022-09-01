@@ -5,47 +5,28 @@ const { resolve } = require('path');
 const { isAdmin } = require('../middlewares/isAdmin');
 
 const userController = {
-    register = async (req, res) => {
-        return res.render("./users/register", {
-            title: "Registro",
+
+    create: (req, res) => {
+        return res.render("/users/create", {
+            title: "Crear usuario",
             styles: ["header", "footer", "register"]
         })
     },
-    process: async (req, res) => {
-        let validaciones = validationResult(req)
-        let { errors } = validaciones;
-
-        if (errors && errors.length > 0) {
-            return res.render("./users/register", {
-                title: "Registro",
-                styles: ["header", "footer", "register"],
-                errors: validaciones, mapped()
-            });
-        }
-
-
+    process: function (req, res) 
+    {
         req.body.password = hashSync(req.body.password, 10);
-        req.body.isAdmin = String(req.body.email).toLocaleLowerCase().includes('@.com');
-        req.body.imagen = req.files[0].filename;
-
-        if (req.files && req.files.length > 0) {
-
-            let imagenUsuario = await imagen.create({
-                nombre: req.files[0].filename
-            })
-            req.body.imagenId = imagenUsuario.id;
-        }
-        await usuarios.create(req.body)
+        req.body.isAdmin = req.body.admin == "adminSi" ? true :false
+        
         return res.redirect('/')
     },
-    login: async function (req, res) {
+    login: function (req, res) {
         return res.render('users/login', {
             title: "Login",
             styles: ["style", "header", "footer", "login"]
         });
     },
 
-    logout: async function (req, res) {
+    logout: function (req, res) {
         delete req.session.user
         return res.redirect('/')
     },
