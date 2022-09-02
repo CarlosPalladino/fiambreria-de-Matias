@@ -37,6 +37,35 @@
             <section class="category">
 
                 <a href="/products/categorias" class="product_cart">Nuestros productos</a>
+                <section id="categorias-carousel">
+                    <ul id="track">
+                        <% let iterable = categorias.lenght + 1 %>
+                        <% for( let i = 0; i < 7; i++ ) { %>
+                            <% let i2 = i ++%>
+                            <li class="slide">     
+                                
+                                <a class="cat-carr" href="/contacto">
+                                    <img src="">
+                                    <h5>Categoria<%=i2%> </h5>
+                                </a>
+                                
+                                <a class="cat-carr" href="/contacto">
+                                    
+                                    <img src="">
+                                    <h5>Categoria<%=i%></h5>
+                                </a>
+
+                            </li>
+                        <% } %>
+                        
+                    </ul>
+                    <nav class="btns">
+                        <a id="btn-prev" href="#"><i class="fa-solid fa-arrow-left"></i></a>
+                        <a id="btn-next" href="#"><i class="fa-solid fa-arrow-right"></i></a>
+                        
+                    </nav>
+                    
+                </section>
 
 
                 <h3 class="titular">CARROUSEL CATEGORIAS</h3>
@@ -83,6 +112,7 @@
         </main>
 
         <%-include('./includes/footer.ejs') %>
+        <script src="/scripts/carousel-categorias.js"></script>
 
             </body>
 

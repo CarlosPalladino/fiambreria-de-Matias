@@ -68,7 +68,78 @@ a.boton{
     letter-spacing: 2px;
 
 }
+/*CARUSEL CATEGORIAS*/
+li{
+    text-decoration:none;
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap:5px
 
+}
+a.cat-carr{
+    text-decoration: none;
+    z-index: 4
+    
+
+}
+.cat-carr img{
+    width: 110px;
+    height:110px;
+    object-fit: cover;
+}
+.cat-carr h5{
+    font-size:12px;
+    color:#670606
+}
+#categorias-carousel{
+    margin: 10px auto;
+    width: 100vw;
+    height: 140px;
+    overflow: hidden;
+    position:relative
+}
+#track{
+    
+    width: 100%;
+    height:100%;
+    position:relative;
+    transition: all 500ms
+    
+}
+.slide{
+    width:100%;
+    height:100%;
+    position: absolute
+}
+.btns{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    display:flex;
+    justify-content:space-between;
+    z-index:3;
+    width: 100%;
+    height: 5.5rem;
+    box-sizing: border-box;
+    padding: 0 2px
+}
+.btns a{
+    text-decoration:none;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1px 2px;
+    background-color:#9C211C;
+    border-radius:3px;
+    height: 1.5rem;
+    width: 1.5rem;
+
+}
+
+/*TERMINA CARUSEL CATEGORIAS*/
 section.destacados{
     display: flex;
     flex-wrap: wrap;
@@ -85,7 +156,7 @@ article.item-article{
     justify-content: center;
     background-color: white;
     width: 90vw;
-    border: 0.5px solid #9C211C;
+    border: groove;
     gap:5px;
     padding-bottom:5px
 }
