@@ -20,10 +20,11 @@ const controller={
         })
     },   
     categoria: (req,res)=> { //LISTO
-        let categoria = req.params.category;
+        let cat = categorias()
+        let categoria = cat.find( u => {u.id ==req.params.category});
         let productos = index()
         let pertenecen = productos.filter(element=>{
-          if (element.category == categoria)
+          if (element.category == categoria.name)
           return element
         })
         return res.render('products/categoria',{
