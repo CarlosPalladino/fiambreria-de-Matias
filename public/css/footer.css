@@ -11,3 +11,8 @@
     text-align: center;
 text-decoration: none;
 }
+#articles a {
+    text-decoration: none;
+    margin: 2px;
+    font-size: 16px;
+}

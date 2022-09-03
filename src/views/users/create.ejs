@@ -1,37 +1,42 @@
 <%-include('../includes/head.ejs') %>
 
     <%- include('../includes/header.ejs') %>
-<body>
-    <main>
-        <form action="/users/create" method="POST">
-            <label for="username">Nombre de Usuario (se usará en el inicio de sesión</label>
-            <input type="text" name="username" id="username" required>
 
-            <label for="name">Nombre</label>
-            <input type="text" name="name" id="name">
+        <body>
+            <main>
+                <section id="form">
+                    <form action="/users/create" method="POST">
+                        <label for="username">Nombre de Usuario (se usará en el inicio de sesión</label>
+                        <input type="text" name="username" id="username" required>
 
-            <label for="lastname">Apellido</label>
-            <input type="text" name="lastname" id="lastname">
+                        <label for="name">Nombre</label>
+                        <input type="text" name="name" id="name">
 
-            <label for="password">Contraseña</label>
-            <input type="password" name="password" id="password" required>
+                        <label for="lastname">Apellido</label>
+                        <input type="text" name="lastname" id="lastname">
 
-            <label for="passConfirm">Repetir contraseña</label>
-            <input type="password" name="" name="passConfirm" id="passConfirm" required>
+                        <label for="password">Contraseña</label>
+                        <input type="password" name="password" id="password" required>
 
-            <label for="admin">Administrador o Usuario?</label>
-            <p>El administrador puede ver y editar los perfiles de los demas usuarios, mientras que el usuario solo puede editar su perfil (pero no puede ponerse admin)</p>
-            <select name="admin" id="admin">
-                <option value="adminSi">Administrador</option>
-                <option value="adminNo">Usuario</option>
-            </select>
+                        <label for="passConfirm">Repetir contraseña</label>
+                        <input type="password" name="" name="passConfirm" id="passConfirm" required>
 
-            <button type="submit" name="registrar">Crear Usuario</button>
+                        <label for="admin">Administrador o Usuario?</label>
+                        <p>El administrador puede ver y editar los perfiles de los demas usuarios, mientras que el
+                            usuario solo puede editar su perfil (pero no puede ponerse admin)</p>
+                        <select name="admin" id="admin">
+                            <option value="adminSi">Administrador</option>
+                            <option value="adminNo">Usuario</option>
+                        </select>
 
-        </form>
-    </main>
+                        <button type="submit" name="registrar">Crear Usuario</button>
 
-</body>
+                    </form>
+                </section>
+            </main>
+            <%- include("../includes/footer.ejs") %>
+
+        </body>
 
 
-</html>    
+        </html>

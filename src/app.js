@@ -29,6 +29,7 @@ app.use(cookieParser())
 //RUTAS
 app.use(require("./routes/main.routes"))
 app.use("/products",require("./routes/product.routes"))
+app.use ("/users",require("./routes/user.routes"))
 
 
 

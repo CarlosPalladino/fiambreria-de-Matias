@@ -1,6 +1,6 @@
-const {readFileSync,writeFileSync, fdatasync, lstat} = require('fs')
+const {readFileSync,writeFileSync, fdatasync} = require('fs')
 const { resolve } = require('path');
-const model = {
+const model= {
 
 index : function () {
     let file = path.join(__dirname, '../data', 'users.json');
@@ -11,23 +11,21 @@ one: function () {
 let file = path.join(__dirname, '../data', 'users.json');
 let data = readfleSync(file);
 let users = JSON.parse(data);
-return users.find (user => users.id == user.id)
+return users.find (user => user.id == id)
 },
 
-create : function (data) {
-let file = resolve(__dirname, '../data', 'users.json');
+create : function (data){
+let file = resolve(__dirname,'../data', 'users.json');
 let info = readFileSync(file);
 let users = JSON.parse(info);
-return users.find (user=> users.id== user.id);
- /* return Object({
+ return ({
     id: users.length === 0 ? 1 : last.id +1,
     username:data.name,
     lastname:data.lastname,
-    email:data.email.toLowerCase(),
+    email:data.email (),
     password :data.password,
-    isAdmin:data.isAdmin.includes('@lasmarias.com'),
-})*/
-
+    isAdmin:data.isAdmin.in
+}) 
 },
 
 write: function (data) {
