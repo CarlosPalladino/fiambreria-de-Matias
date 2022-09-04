@@ -1,25 +1,25 @@
 [
-    {
-        "id":1,
-        "name":"Matambre de Pollo",
-        "description":"Matambre de pechuga de pollo realizado Artesanalmente",
-        "marca":"cuchuflito",
-        "images":"fotomuestra.jpg",
-        "category":"Matambres",
-        "sub-categoria":"de Pollo",
-        "peso":2,
-        "price": 2000
-        
-    },
-   { "id":2,
-    "name":"queso entero",
-    "description":"queso entero sardo",
-    "marca":"menganito",
-    "images":"fotomuestra ",
-    "category":"quesos",
-    "sub-categoria":"fresco",
-    "peso":"///",
-    "price":"///"
-}
-
+  {
+    "id": 1,
+    "name": "Matambre de Pollo",
+    "description": "Matambre de pechuga de pollo realizado Artesanalmente",
+    "marca": "cuchuflito",
+    "images": "fotomuestra.jpg",
+    "category": "Matambres",
+    "sub-categoria": "de Pollo",
+    "peso": 2,
+    "price": 2000
+  },
+  {
+    "id": 2,
+    "name": "queso entero",
+    "description": "queso entero sardo",
+    "marca": "menganito",
+    "images": "fotomuestra ",
+    "category": "quesos",
+    "sub-categoria": "fresco",
+    "peso": "///",
+    "price": "///"
+  }
+  
 ]
