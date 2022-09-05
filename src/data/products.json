@@ -9,7 +9,8 @@
     "name": "Matambre de Pollo",
     "category": "Mortadelas",
     "marca": "Paladini",
-    "description": "Traido del mas alla"
+    "description": "Traido del mas alla",
+    "descuento":30
   },
   {
     "id": 2,
