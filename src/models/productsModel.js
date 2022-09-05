@@ -22,8 +22,8 @@ const model ={
             name: data.name,
             category: data.category,
             marca:data.marca,
-            peso:parseInt(data.peso),
-            price: parseInt(data.price),
+            peso:parseFloat(data.peso),
+            price: parseFloat(data.price),
             description: data.description,
             destacado: data.destacado == "si"? true : false,
             image: data.image

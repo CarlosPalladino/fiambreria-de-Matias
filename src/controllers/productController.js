@@ -68,27 +68,32 @@ const controller={
           product: product,
           styles: [
             "header",
-            "footer"
+            "footer",
+            "forms"
           ]
         })
     },
     edited:(req, res)=>{
         let product = one(parseInt(req.params.id))
         let products = index()
+        console.log(req.body)
         let productsEdited = products.map(p=>{
             if(p.id == product.id){
                 p.name = req.body.name
-                p.description = req.body.description
                 p.category = req.body.category
-                p.price = parseInt(req.body.price)
-                p.peso = parseInt(req.body.peso)
+                p.marca = req.body.marca
+                p.peso = parseFloat(req.body.peso)
+                p.price = parseFloat(req.body.price)
+                p.description = req.body.description
                 p.destacado = req.body.destacado == "si"? true:false
                 if(req.files && req.files.length > 0){
-                    unlinkSync(join(__dirname, "../../public/images/", "products-images",p.image))
-                    p.image = req.files[0].filename 
-                  } else{
-                    p.image = p.image
-                  }
+                  product.image.forEach(img=>{
+                    unlinkSync(join(__dirname, "../../public/images/", "products-images",img))
+                  })
+                  p.image = req.files.map(f=> f.filename)
+                } else{
+                  p.image  = product.image
+                }
             }
             return p
         })

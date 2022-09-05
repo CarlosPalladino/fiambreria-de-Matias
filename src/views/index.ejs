@@ -34,15 +34,16 @@
                     </li>
                 </ul>
             </div>
+            <!--ARRANCA EL CAMBIO-->
             <section class="category">
 
                 <a href="/products/categorias" class="boton">NUESTROS PRODUCTOS</a>
                 <section id="categorias-carousel">
-                    <ul id="track">
+                    <nav id="track">
                         <% let iterable = categorias.lenght + 1 %>
                         <% for( let i = 0; i < 7; i++ ) { %>
                             <% let i2 = i ++%>
-                            <li class="slide">     
+                            <div class="slide">     
                                 
                                 <a class="cat-carr" href="/contacto">
                                     <img src="">
@@ -50,20 +51,20 @@
                                 </a>
                                 
                                 <a class="cat-carr" href="/contacto">
-                                    
+  
                                     <img src="">
                                     <h5>Categoria<%=i%></h5>
                                 </a>
-
-                            </li>
+                            </div>
                         <% } %>
                         
-                    </ul>
-                    <nav class="btns">
+                        
+                        </nav>
+                    
                         <a id="btn-prev" href="#"><i class="fa-solid fa-arrow-left"></i></a>
                         <a id="btn-next" href="#"><i class="fa-solid fa-arrow-right"></i></a>
                         
-                    </nav>
+                    
                     
                 </section>
 

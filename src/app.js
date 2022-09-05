@@ -16,6 +16,9 @@ app.use(public)
 app.set('views', resolve(__dirname, 'views'));
 app.set ("view engine", "ejs");
 
+app.use(express.urlencoded({extended:false}));
+app.use(express.json())
+
 app.use(method("m"))
 app.use(session({
     secret: "nodejs", 
