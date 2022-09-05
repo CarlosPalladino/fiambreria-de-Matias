@@ -16,6 +16,7 @@ slides.forEach((slide,index)=>{
 
 slides[0].classList.add("active")
 
+
 document.querySelector("#btn-next").addEventListener("click", function(e){
     e.preventDefault()
     let current = document.querySelector("#track .slide.active")
@@ -24,7 +25,7 @@ document.querySelector("#btn-next").addEventListener("click", function(e){
         track.style.transform = `translateX(0)`
         current.classList.remove("active")
         slides[0].classList.add("active")
-    } else if(next){
+    } else{
         track.style.transform = `translateX(-${next.style.left})`
         current.classList.remove("active")
         next.classList.add("active")
@@ -34,14 +35,17 @@ document.querySelector("#btn-prev").addEventListener("click", function(e){
     e.preventDefault()
     let current = document.querySelector("#track .slide.active")
     let next = current.previousElementSibling
-    if(!next){
-        track.style.transform = `translateX(-${slides[2].style.left})`
-        current.classList.remove("active")
-        slides[2].classList.add("active")
-    } else if(next){
+    
+    if(next){
+        
         track.style.transform = `translateX(-${next.style.left})`
         current.classList.remove("active")
-        next.classList.add("active")
-    }
+        next.classList.add("active")                                                                                                                 
+    } else {
+        let lastIndex = slides.length -1    
+        track.style.transform = `translateX(-${slides[lastIndex].style.left})`
+        current.classList.remove("active")
+        slides[lastIndex].classList.add("active")
+    }  
 })
 

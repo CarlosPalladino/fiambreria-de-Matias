@@ -13,8 +13,8 @@ const cookieParser = require("cookie-parser")
 app.listen(port, callback)
 app.use(public)
 
-app.set ("view engine", "ejs");
 app.set('views', resolve(__dirname, 'views'));
+app.set ("view engine", "ejs");
 
 app.use(method("m"))
 app.use(session({
@@ -23,6 +23,8 @@ app.use(session({
     resave: true
 }))
 app.use(cookieParser())
+
+//FALTA EL RECORDAME Y EL MIDDLEWARE DEL USER
 
 
 

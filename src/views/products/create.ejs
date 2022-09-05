@@ -6,15 +6,12 @@
             <section class="form">
 
 
-                <form action="/products/created" method="POST enctype=multipart/form-data">
+                <form action="/products/created" method="POST" enctype="multipart/form-data">
                     <label for="name">Nombre del Producto</label>
-                    <input type="text" name="name" id="relleno" required>
-
-                    <label for="imageS">Imagen/es del Producto</label>
-                    <input type="file" name="product-image" id="relleno" required>
+                    <input type="text" name="name" id="name" required placeholder="Ej.: Bondiola Serrana...">
 
                     <label for="category">Categoría del Producto</label>
-                    <select name="category" id="category" required>
+                    <select name="category" id="category" required >
                         <option value="Quesos">QUESOS</option>
                         <option value="Cocidos">COCIDOS</option>
                         <option value="Jamon Crudo">JAMON CRUDO</option>
@@ -25,21 +22,36 @@
                         <option value="Pancetas">PANCETAS</option>
                     </select>
 
+                    <label for="marca">Marca del Producto</label>
+                    <input type="text" name="marca" id="marca" required placeholder="Ej.: Paladini...">
 
+                    <label for="peso">Cuanto pesa el paquete cerrado en kg?(no escribir kg, solo el nro)</label>
+                    <input type="number" name="peso" id="peso" step="0.01" required placeholder="Ej.:  1, 1.5, 5, 0.6...">
 
-                    <label for="peso">Cuanto pesa el paquete cerrado?(en kg sin signo $ ni puntos)</label>
-                    <input type="number" name="peso" id="relleno" value required>
+                    <label for="price">Precio del Producto, (no colocar el signo $, ni separador de miles)</label>
+                    <input type="number" name="price" id="price"  step="0.01" required placeholder="Ej.: 2500...">
 
-                    <label for="price">Precio del Producto</label>
-                    <input type="number" name="price" id="relleno" required>
                     <label for="description">Descripción del Producto</label>
-                    <textarea name="description" id="description" required" required></textarea>
+                    <textarea name="description" id="description" required placeholder=""></textarea>
+
+                    <label for="destacado">Destacar Producto?</label>
+                    <select name="destacado" id="destacado" required >
+                        <option value="no">No</option>
+                        <option value="si">Si</option>
+                    </select>
+
+                    <label for="product-image">Imagen/es del Producto</label>
+                    <input type="file" name="product-image" id="product-image" multiple required >
+
+
                     <button type="submit" id="btn">Crear Producto</button>
                 </form>
             </section>
+            
         </main>
 
         /* consultar por si quiere porcentaje de descuento */
+        <script src="/scripts/forms.js"></script>
 
         </body>
 

@@ -13,23 +13,24 @@ const model ={
         return products.find(product => product.id === id)
     },
     create:function(data){
-        let file = resolve(_dirname,"../data","products.json")
+        let file = resolve(__dirname,"../data","products.json")
         let datosViejos = readFileSync(file,{encoding: "utf-8"});
         let products = JSON.parse(datosViejos);
         let last = products[products.length-1]
         return Object({
             id:products.length == 0 ? 1 : last.id + 1,
             name: data.name,
-            description: data.description,
-            image: data.image,
             category: data.category,
+            marca:data.marca,
             peso:parseInt(data.peso),
             price: parseInt(data.price),
-            destacado: data.destacado == "si"? true : false
+            description: data.description,
+            destacado: data.destacado == "si"? true : false,
+            image: data.image
         })
     },
     write:function(data){
-        let file = resolve(_dirname,"../data","products.json");
+        let file = resolve(__dirname,"../data","products.json");
         let info = JSON.stringify(data, null,2);
         return writeFileSync(file,info); 
     }

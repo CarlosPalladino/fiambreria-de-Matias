@@ -47,11 +47,11 @@ const controller={
     create: (req,res)=> { //LISTO
         return res.render("products/create",{
             title:"Crear Producto",
-            styles:["header","footer","create"]
+            styles:["header","footer", "forms"]
         })
     },
     created: (req,res)=> {// LISTO
-        req.body.image = req.files[0].filename;
+        req.body.image = req.files.map(f=> f.filename);
         let newProduct = create(req.body)
         let products = index()
         products.push(newProduct)
@@ -100,7 +100,10 @@ const controller={
         if(!product){
           return res.redirect("/products/")
         }
-        unlinkSync(join(__dirname, "../../public/images/", "products-images",product.image))
+        product.image.forEach(img => {
+          unlinkSync(join(__dirname, "../../public/images/", "products-images",img))
+        })
+        
         let products = index()
         let productsDeleted = products.filter(p=>p.id !== product.id)
         write(productsDeleted)
