@@ -7,7 +7,7 @@ const userController = {
     create: (req, res) => {
         return res.render("users/create", {
             title: "Crear usuario",
-            styles: ["header", "footer", "register"]
+            styles: ["header", "footer", "forms"]
         })
     },
     process: function (req, res) 
