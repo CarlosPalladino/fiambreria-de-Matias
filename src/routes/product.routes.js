@@ -12,7 +12,7 @@ router.get("/detail/:id", detail)
 router.get("/create", create)
 router.post("/created",[upload.any()], created)
 router.get("/edit/:id",edit)
-router.put("/edit/:id",edited)
+router.put("/edit/:id",[upload.any()],edited)
 router.delete("/delete/:id",destroy)
 
 module.exports = router;

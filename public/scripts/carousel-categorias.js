@@ -40,7 +40,7 @@ document.querySelector("#btn-prev").addEventListener("click", function(e){
         
         track.style.transform = `translateX(-${next.style.left})`
         current.classList.remove("active")
-        next.classList.add("active")                                                                                                                 
+        next.classList.add("active")
     } else {
         let lastIndex = slides.length -1    
         track.style.transform = `translateX(-${slides[lastIndex].style.left})`

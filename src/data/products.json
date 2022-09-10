@@ -1,14 +1,16 @@
 [
   {
     "id": 1,
-    "name": "Matambre de Pollo",
-    "description": "Matambre de pechuga de pollo realizado Artesanalmente",
-    "marca": "cuchuflito",
     "images": "fotomuestra.jpg",
-    "category": "Matambres",
     "sub-categoria": "de Pollo",
-    "peso": 2,
-    "price": 2000
+    "peso": "1.5",
+    "price": "2800.32",
+    "destacado": false,
+    "name": "Matambre de Pollo",
+    "category": "Mortadelas",
+    "marca": "Paladini",
+    "description": "Traido del mas alla",
+    "descuento":30
   },
   {
     "id": 2,
@@ -21,5 +23,4 @@
     "peso": "///",
     "price": "///"
   }
-  
 ]
