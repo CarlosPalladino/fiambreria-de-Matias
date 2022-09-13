@@ -2,6 +2,7 @@ let track = document.querySelector("#track")
 //NOS TRAEMOS AL UL#TRACK
 
 let slides = Array.from(track.children)
+console.log(slides)
 //ACA NOS TRAEMOS A LOS HIJOS (LOS LI CON ETIQUETA SLIDE) Y LOS OCNVERTIMOS EN ARRAY
 
 let widthSlide = slides[0].getBoundingClientRect().width
