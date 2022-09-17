@@ -1,9 +1,44 @@
 [
     {
         "id":1,
-        "name": "quesos",
+        "name": "Quesos",
         "description": "descripcion",
-        "image":"image",
+        "image":"cheese-1.jpg",
         "banner": "banner"
+    },
+    {
+        "id":2,
+        "name": "Embutidos",
+        "description": "descripcion",
+        "image":"salami-2.jpg",
+        "banner": "banner"  
+    },
+    {
+        "id":3,
+        "name": "Fiambres",
+        "description": "descripcion",
+        "image":"ham-1.jpg",
+        "banner": "banner"  
+    },
+    {
+        "id":4,
+        "name": "Harinas",
+        "description": "descripcion",
+        "image":"flour-1.jpg",
+        "banner": "banner"  
+    },
+    {
+        "id":5,
+        "name": "Dulces",
+        "description": "descripcion",
+        "image":"membrillo-1.jpg",
+        "banner": "banner"  
+    },
+    {
+        "id":6,
+        "name": "Otros",
+        "description": "descripcion",
+        "image":"oil-1.jpg",
+        "banner": "banner"  
     }
 ]

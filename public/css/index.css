@@ -58,6 +58,9 @@ a.boton{
 .category{
     text-align: center;
 }
+.category nav{
+    padding: 0 0 15px 0
+}
  .product_cart{
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -76,7 +79,7 @@ a.boton{
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    gap:5px
+    gap:10px
 
 }
 a.cat-carr{
@@ -91,7 +94,7 @@ a.cat-carr{
 .cat-carr h5{
     font-size:12px;
     color:#670606;
-    z-index:4
+
 }
 #categorias-carousel{
     margin: 10px auto;
@@ -114,13 +117,13 @@ a.cat-carr{
     position: absolute
 }
 
-.fa-arrow-right{
+#btn-next{
     text-decoration:none;
     color:white;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1px 2px;
+    padding: 15px;
     background-color:#9C211C;
     border-radius:3px;
     height: 1.5rem;
@@ -130,13 +133,13 @@ a.cat-carr{
     right: 3px;
     top: 55px
 }
-.fa-arrow-left{
+#btn-prev{
     text-decoration:none;
     color:white;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1px 2px;
+    padding: 15px;
     background-color:#9C211C;
     border-radius:3px;
     height: 1.5rem;
@@ -170,7 +173,7 @@ article.item-article{
     flex-wrap: wrap;
     justify-content: center;
     background-color: white;
-    width: 80vw;
+    width: 65vw;
     border-radius:20px;
     gap:5px;
     padding-bottom:5px;

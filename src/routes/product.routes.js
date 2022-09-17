@@ -6,7 +6,7 @@ const storage = require('../modules/storage')
 const upload = multer({storage: storage('product-images')});
 
 router.get("/categorias",todasCategorias)
-router.get("/categorias/:category", categoria)
+router.get("/categorias/:id", categoria)
 router.get("/", list)
 router.get("/detail/:id", detail)
 router.get("/create", create)

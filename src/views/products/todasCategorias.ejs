@@ -6,9 +6,21 @@
 <body>
     <%-include('../includes/header.ejs') %> 
 <main>
-<h4> si se ve, funciona</h4>
+<h3>NUESTROS PRODUCTOS</h3>
+
+<% categorias.forEach(element => { %>
+    <nav>
+        <a href="/products/categorias/<%=element.id%>">
+            <img src="/images/category-images/<%= element.image %>">
+        <h5><%= element.name %></h5>
+        </a>
+        
+    </nav>
+ 
+<% }) %>
 
 </main>
+<%-include('../includes/footer.ejs') %> 
 
 
 </body>

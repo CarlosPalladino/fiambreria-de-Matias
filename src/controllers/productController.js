@@ -1,5 +1,5 @@
 const {index, one, create, write}= require("../models/productsModel")
-const {categorias} = require('../models/catsModel')
+const {categorias, oneCat} = require('../models/catsModel')
 const controller={ 
     todasCategorias:(req,res)=> {  //HAY QUE REQUERIR DESDE CATEGORIAS EL MODELO
         return res.render('products/todasCategorias',{
@@ -9,9 +9,9 @@ const controller={
         });
     },
     list: (req,res)=> { //LISTO
-        let products = index();
+        let productss = index();
         if(req.query && req.query.name){
-          products = products.filter(product=> product.name.toLowerCase().indexOf(req.query.name.toLowerCase())> -1)
+          products = productss.filter(product=> product.name.toLowerCase().indexOf(req.query.name.toLowerCase())> -1)
         }
         return res.render("products/list",{
             title: "Nuestros Productos",
@@ -20,15 +20,16 @@ const controller={
         })
     },   
     categoria: (req,res)=> { //LISTO
-        let cat = categorias()
-        let categoria = cat.find( u => {u.id ==req.params.category});
+        let cat = oneCat(parseInt(req.params.id))
+        let name = cat.name
+        
         let productos = index()
+         
         let pertenecen = productos.filter(element=>{
-          if (element.category == categoria.name)
-          return element
-        })
+          element.category.toLowerCase() == cat.name.toLowerCase()})
+          
         return res.render('products/categoria',{
-            title: categoria.toUpperCase(),
+            title:name.toUpperCase(),
             styles:["header","footer"],
             products: pertenecen
         })

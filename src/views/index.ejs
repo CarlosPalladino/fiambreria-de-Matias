@@ -3,9 +3,6 @@
     <%- include('./includes/header.ejs') %>
 
         <main>
-
-
-        /* se borra y va iamgen estatica
             <h2> BANNER CARROUSEL PRINCIPAL</h2>
             <div id="carrousel">
                <img src="/images/estatica.png" alt="" >
@@ -25,30 +22,34 @@
             </div>
             <!--ARRANCA EL CAMBIO-->
             <section class="category">
+                <nav>
+                    <a href="/products/categorias" class="boton">NUESTROS PRODUCTOS</a>
+                </nav>
 
-                <a href="/products/categorias" class="boton">NUESTROS PRODUCTOS</a>
+                
                 <section id="categorias-carousel">
                     <nav id="track">
-                        <% let iterable = categorias.lenght + 1 %>
-                        <% for( let i = 0; i < 7; i++ ) { %>
+                        <% for( let i = 0; i < 5; i++ ) { %>
                             <% let i2 = i ++%>
                             <div class="slide">     
                                 
-                                <a class="cat-carr" href="/contacto">
-                                    <img src="">
-                                    <h5>Categoria<%=i2%> </h5>
+                                <a class="cat-carr" href="/products/categorias/<%= categorias[i2].id%>">
+                                    <img src="/images/category-images/<%= categorias[i2].image %>">
+                                    <h5><%= categorias[i2].name %></h5>
                                 </a>
                                 
-                                <a class="cat-carr" href="/contacto">
+                                <a class="cat-carr" href="/products/categorias/<%= categorias[i].id%>">
   
-                                    <img src="">
-                                    <h5>Categoria<%=i%></h5>
+                                    <img src="/images/category-images/<%= categorias[i].image %>">
+                                    <h5><%=categorias[i].name%></h5>
                                 </a>
                             </div>
                         <% } %>
                         
                         
                         </nav>
+                       
+                        
                     
                         <a id="btn-prev" href="#"><i class="fa-solid fa-arrow-left"></i></a>
                         <a id="btn-next" href="#"><i class="fa-solid fa-arrow-right"></i></a>
@@ -56,6 +57,8 @@
                     
                     
                 </section>
+               
+                
 
 
 
