@@ -5,7 +5,7 @@
     font-family: "Montserrat";
 }
 #articles{
-    background-color: #FFF0D4;
+    background-color: #02A1B4;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -14,5 +14,5 @@ text-decoration: none;
 #articles a {
     text-decoration: none;
     margin: 2px;
-    font-size: 16px;
+    font-size: 20px;
 }
