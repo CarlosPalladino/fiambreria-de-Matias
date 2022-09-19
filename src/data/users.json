@@ -4,8 +4,33 @@
         "username": "pini",
         "name": "Nicolas",
         "lastname": "Piñol",
-        "email":"nicolas.pinol@hotmail.com",
-        "password":"12345",
+        "email": "nicolas.pinol@hotmail.com",
+        "password": "12345",
         "admin": true
+    },
+    {
+        "id": 2,
+        "username": "carlos",
+        "lastname": "palla",
+        "password": "$2a$10$cHaV3at8cYFWmeB0F6daOufHwquPnQ488JJuq8CuakcQbo/YCU08W"
+    },
+    {
+        "id": 3,
+        "username": "carlos",
+        "lastname": "palla",
+        "password": "$2a$10$8D9WVG4IbZTXn7BZxNhiVOODmCW4ScSvYiFNMpY3LfG8itKpJzgke"
+    },
+    {
+        "id": 4,
+        "username": "car",
+        "lastname": "palla",
+        "password": "$2a$10$kEIydv3imhNdnU5Ne628vOH5NghhLQrLeeM8Zq1GJLKscKHQ2Svki"
+    },
+    {
+        "id": 5,
+        "username": "car",
+        "email": "carlospalla@gmail.com",
+        "lastname": "pa",
+        "password": "$2a$10$jN51SOVmf/XM8FZAijjHle41jw27h1/nMrtcP9tF3AEc8uVo9HVPS"
     }
 ]

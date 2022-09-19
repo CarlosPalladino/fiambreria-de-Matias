@@ -28,7 +28,7 @@ app.use(session({
 app.use(cookieParser())
 
 //FALTA EL RECORDAME Y EL MIDDLEWARE DEL USER
-
+app.use(require('./middlewares/login'))
 
 
 //RUTAS

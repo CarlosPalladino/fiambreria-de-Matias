@@ -1,28 +1,31 @@
 const {readFileSync,writeFileSync, fdatasync} = require('fs')
 const { resolve } = require('path');
+/*const {hashSync}= require('bycript');*/
+
 const model= {
 
 index : function () {
-    let file = path.join(__dirname, '../data', 'users.json');
-    let data = readfleSync(file);
+    let file = resolve(__dirname, '../data','users.json');
+    let data = readFileSync(file);
     return JSON.parse(data);
 },
-one: function () {
-let file = path.join(__dirname, '../data', 'users.json');
-let data = readfleSync(file);
+one: function (email) {
+let file = resolve(__dirname, '../data', 'users.json');
+let data = readFileSync(file, {encoding: 'utf8'});
 let users = JSON.parse(data);
-return users.find (user => user.id == id)
+return users.find (user => user.email == email)
 },
 
 create : function (data){
 let file = resolve(__dirname,'../data', 'users.json');
 let info = readFileSync(file);
 let users = JSON.parse(info);
- return ({
+let last =users[users.length - 1];
+ return Object({
     id: users.length === 0 ? 1 : last.id +1,
     username:data.name,
+    email: data.email,
     lastname:data.lastname,
-    email:data.email (),
     password :data.password,
     isAdmin:data.isAdmin.in
 }) 
