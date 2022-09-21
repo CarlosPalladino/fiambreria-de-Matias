@@ -1,6 +1,8 @@
 const { index, one, create, write } = require("../models/usersModel");
 const { hashSync } = require("bcryptjs")
 const { resolve } = require('path');
+const {validationResult} = require('express-validator')
+const {validaciones} = require
 
 const userController = {
     create: (req, res) => {
@@ -21,12 +23,15 @@ const userController = {
         return res.redirect('/')
     },
     access: function (req, res) {
+        let validaciones = validationResult(req)
+        let {errors}= validaciones
         if (errors && errors.length > 0) {
         
             return res.redirect('users/login', {
                 title: 'Login',
                 styles: ['style', 'header', 'footer', 'login'],
-                
+                oldData:req.body,
+
             });}
         let users = index();
         let user = users.find(u => u.email === req.body.email);

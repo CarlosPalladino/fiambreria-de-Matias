@@ -27,13 +27,13 @@ let last =users[users.length - 1];
     email: data.email,
     lastname:data.lastname,
     password :data.password,
-    isAdmin:data.isAdmin.in
+    isAdmin:data.isAdmin
 }) 
 },
 
 write: function (data) {
 let file = resolve(__dirname, '../data', 'users.json');
-let info = JSON.stringify(data,null);
+let info = JSON.stringify(data,null,2);
 return writeFileSync(file, info);
 }
 
