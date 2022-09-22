@@ -4,7 +4,7 @@ const controller={
     home:(req,res)=> { 
         let products = index()
         return res.render('index',{
-            title :"Las Marias",
+            title :"La Maria",
             styles: ["index","header","footer" ],
             categorias:categorias(),
             products: products 

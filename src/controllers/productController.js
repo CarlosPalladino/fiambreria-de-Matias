@@ -21,7 +21,6 @@ const controller={
     },   
     categoria: (req,res)=> { //LISTO
         let cat = oneCat(parseInt(req.params.id))
-        let name = cat.name
         
         let productos = index()
          
@@ -29,8 +28,8 @@ const controller={
           element.category.toLowerCase() == cat.name.toLowerCase()})
           
         return res.render('products/categoria',{
-            title:name.toUpperCase(),
-            styles:["header","footer"],
+            title:cat.name.toUpperCase(),
+            styles:["header","footer", "categoria"],
             products: pertenecen,
             categoria:cat
         })

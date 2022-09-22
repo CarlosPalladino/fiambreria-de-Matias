@@ -1,0 +1,25 @@
+main{
+    background-color: #FFF0D4;
+    padding-bottom:30px
+}
+.banner-categoria{
+    width:100%
+}
+.banner-categoria img{
+    width:100%
+}
+.titular{
+    letter-spacing: 2px;
+    text-align: center;
+    color:#670606;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom:10px
+}
+.return-nav {
+    padding:10px
+}
+.return-nav a{
+    color:#9C211C;
+    text-decoration:none
+}
