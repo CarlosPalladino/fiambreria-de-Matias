@@ -15,18 +15,22 @@
         <i class="fa-solid fa-plus"></i>
      
     </nav>
-  <a href="/products/create/"><i class="fa-solid fa-plus new product"></i></a>
+    <% if (user && user.isAdmin) { %>
+
+        <a href="/products/create/"><i class="fa-solid fa-plus new product"></i></a>
+        
+        <% } %>
   
-   <% if (user && user.admin) { %>
     
 
  
- <a href="/users/create"class="navbarLinks">Ingresá</a>
+  
+  <a href="/users/login" class="navbarLinks">Login</a>
+  
+  <a href="/users/create"class="navbarLinks">Ingresá</a>
 
-    <% } %>
-
- <a href="/users/login" class="navbarLinks">Login</a>
-
+ <a href ="/users/logout" class="navbarLinks" type="submit">Cerrar
+    sesión</a>
 
     <form action="/products/" method="get" class="search-form">
         <input type="text" placeholder="Buscar Productos">
