@@ -1,26 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<%-include('../includes/head.ejs') %> 
-</head>
+<%-include('../includes/head.ejs')%> 
+
 <body>
     <%-include('../includes/header.ejs') %> 
 <main>
-<h3>NUESTROS PRODUCTOS</h3>
 
-<% categorias.forEach(element => { %>
-    <nav>
+    <figure class="banner-categorias">
+        <img src="/images/banner-home-1.jpg">
+    </figure>
+    
+    <h3 class="titular">NUESTROS PRODUCTOS</h3>
+
+    <nav class="categorias-nav">
+        <% categorias.forEach(element => { %>
         <a href="/products/categorias/<%=element.id%>">
+
             <img src="/images/category-images/<%= element.image %>">
-        <h5><%= element.name %></h5>
+            <h5><%= element.name %></h5>
         </a>
+        <% })%>
         
     </nav>
  
-<% }) %>
+
 
 </main>
 <%-include('../includes/footer.ejs') %> 
+
+
 
 
 </body>

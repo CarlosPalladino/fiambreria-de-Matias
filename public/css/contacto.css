@@ -1,7 +1,13 @@
 
 main{
     background-color:#FFF0D4;
-    padding: 10px 0 
+    padding-bottom: 30px
+}
+.banner-contacto{
+    width:100%
+}
+.banner-contacto img{
+    width:100%
 }
 .whatsapp {
     padding: 10px;
@@ -48,7 +54,8 @@ section.contacto-container{
     height: auto;
     display:flex;
     flex-direction: column;
-    gap:5px
+    gap:15px;
+    padding:15px 0
 }
 
 .tel-insta{
@@ -108,12 +115,13 @@ section.contacto-container{
 }
 /* COMO COMPRAR */
 section.comprar{
+    padding:15px 0;
     margin: 5px auto;
     width: 95vw;;
     height: auto;
     display:flex;
     flex-direction: column;
-    gap:5px
+    gap:15px
 }
 .comprar h3{
     text-transform: uppercase;
