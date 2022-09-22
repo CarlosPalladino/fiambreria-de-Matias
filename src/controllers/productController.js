@@ -4,7 +4,7 @@ const controller={
     todasCategorias:(req,res)=> {  //HAY QUE REQUERIR DESDE CATEGORIAS EL MODELO
         return res.render('products/todasCategorias',{
             title :"Nuestros Productos",
-            styles: ["header","footer", ],
+            styles: ["header","footer","todasCategorias" ],
             categorias: categorias()
         });
     },
@@ -31,7 +31,8 @@ const controller={
         return res.render('products/categoria',{
             title:name.toUpperCase(),
             styles:["header","footer"],
-            products: pertenecen
+            products: pertenecen,
+            categoria:cat
         })
     },
     detail:(req,res)=>{ //LISTO

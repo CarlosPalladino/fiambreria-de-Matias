@@ -1,13 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %> </title>
-</head>
+
+<%-include('../includes/head.ejs') %> 
+
 <body>
-    <h5>FALOPA</h5>
+    <%-include('../includes/header.ejs') %> 
+    <main>
+        <figure class="banner-categoria">
+            <img src="/images/category-images/<%=categoria.banner%>">
+        </figure>
+
+    </main>
+    <%-include('../includes/footer.ejs') %> 
     
 </body>
+    
 </html>
