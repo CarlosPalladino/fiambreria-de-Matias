@@ -3,13 +3,16 @@ const { body } = require('express-validator');
 const { index } = require('../models/usersModel');
 const login =[
  //email
-body('email').notEmpty().custom(value=>{
+body('email').notEmpty().withMessage('el email no puede quedar vacia').bail().custom(value=>{
     let users= index()
     users= user.map(u=>u.email)
     if(!users.includes(value)){
-}}),
+        throw new Error('el email es incorrecto')
+} return true 
+}
+).bail(),
 // password
-body('password').notEmpty().custom((value,{req})=>{
+body('password').notEmpty().withMessage('la contraseña no puede quedar vacia').bail().custom((value,{req})=>{
     let {email} = req.body
     let users= index()
     let user =users.find(u=>u.email === email)
