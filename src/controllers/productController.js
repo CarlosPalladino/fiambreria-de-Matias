@@ -24,8 +24,10 @@ const controller={
         
         let productos = index()
          
-        let pertenecen = productos.filter(element=>{
-          element.category.toLowerCase() == cat.name.toLowerCase()})
+        let pertenecen = productos.filter(e=>e.category.toLowerCase()== cat.name.toLowerCase())
+          console.log(cat)
+          console.log(productos)
+          console.log(pertenecen)
           
         return res.render('products/categoria',{
             title:cat.name.toUpperCase(),

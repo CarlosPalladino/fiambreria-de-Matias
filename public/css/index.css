@@ -93,8 +93,8 @@ a.cat-carr{
 
 }
 .cat-carr img{
-    width: 110px;
-    height:110px;
+    width: 35vw;
+    height:35vw;
     object-fit: cover;
 }
 .cat-carr h5{
@@ -105,7 +105,7 @@ a.cat-carr{
 #categorias-carousel{
     margin: 10px auto;
     width: 100vw;
-    height: 140px;
+    height: 200px;
     overflow: hidden;
     position:relative
 }
@@ -137,7 +137,7 @@ a.cat-carr{
     z-index:3;
     position:absolute;
     right: 3px;
-    top: 55px
+    top: 75px
 }
 #btn-prev{
     text-decoration:none;
@@ -153,7 +153,7 @@ a.cat-carr{
     z-index:3;
     position:absolute;
     left: 3px;
-    top: 55px
+    top: 75px
 }
 .active a{
     z-index:5

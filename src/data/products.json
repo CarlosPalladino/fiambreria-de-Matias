@@ -2,15 +2,24 @@
   {
     "id": 1,
     "images": "fotomuestra.jpg",
-    "sub-categoria": "de Pollo",
     "peso": "1.5",
     "price": "2800.32",
     "destacado": false,
     "name": "Matambre de Pollo",
-    "category": "Mortadelas",
+    "category": "Embutidos",
     "marca": "Paladini",
     "description": "Traido del mas alla",
-    "descuento": 30
+    "descuento":30
+  },
+  {
+    "id": 2,
+    "name": "queso entero",
+    "description": "queso entero sardo",
+    "marca": "menganito",
+    "images": "fotomuestra ",
+    "category": "quesos",
+    "peso": "///",
+    "price": "///"
   }
  
   
