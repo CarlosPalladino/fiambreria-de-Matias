@@ -8,10 +8,17 @@ main{
 
 .banner-categorias{
     width:100%;
-    margin-bottom:30px
 }
 .banner-categorias img{
     width:100%
+}
+.return-nav {
+    padding:10px;
+    margin-bottom:15px
+}
+.return-nav a{
+    color:#9C211C;
+    text-decoration:none
 }
 .titular{
     letter-spacing: 2px;
