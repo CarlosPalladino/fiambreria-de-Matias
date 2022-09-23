@@ -10,17 +10,8 @@
     "category": "Mortadelas",
     "marca": "Paladini",
     "description": "Traido del mas alla",
-    "descuento":30
-  },
-  {
-    "id": 2,
-    "name": "queso entero",
-    "description": "queso entero sardo",
-    "marca": "menganito",
-    "images": "fotomuestra ",
-    "category": "quesos",
-    "sub-categoria": "fresco",
-    "peso": "///",
-    "price": "///"
+    "descuento": 30
   }
+ 
+  
 ]
