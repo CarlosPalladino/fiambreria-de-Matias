@@ -25,11 +25,11 @@ app.use(session({
     saveUninitialized: true,
     resave: true
 }))
-app.use(cookieParser())
+
 
 //FALTA EL RECORDAME Y EL MIDDLEWARE DEL USER
 app.use(require('./middlewares/login'))
-
+app.use(cookieParser())
 
 //RUTAS
 app.use(require("./routes/main.routes"))

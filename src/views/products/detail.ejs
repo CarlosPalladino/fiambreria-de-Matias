@@ -16,12 +16,18 @@
                                 <h2>
                                     <%= product.name %>
                                 </h2>
-                                <p>
-                                    $2.500
-                                </p>
-                                <p>
-                                    - comoprando por mayor tenes un precio diferente de producto
-                                </p>
+                                <h4 class="descuento">
+                                    <%= product.descuento %> % de descuento
+                                </h4>      <h4>
+                                    <%= product.peso %>kg
+                                </h4>
+                                <div id="precioDescuento">
+                                    <%let precioDesc= product.price - (product.price/100*product.descuento)%>
+                                    <h5 class="item-price">$<%= parseInt(precioDesc) %>,00</h5>
+                                    <h6>$<%=parseInt(product.price) %>,00</h6>
+                                </div>
+                          
+
                             </article>
                         </article>
                     </section>
@@ -32,5 +38,6 @@
 
 
     </body>
+    <%-include('../includes/footer.ejs') %>
 
-    </html>
+        </html>
