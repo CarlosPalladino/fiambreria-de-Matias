@@ -12,8 +12,7 @@
         <!-- a mejorar  -->
         <main>
             <h2 id="titulo">Login</h2>
-            <section id="section">
-                <article id="login">
+            
                     <form action="/users/access" method="post" id="login__form">
                         <label for="email">Email de usuario</label>
                         <input type="email" name="email" id="usuario" required value="<%= locals.oldData ? oldData.email: null %>"/>
@@ -22,33 +21,33 @@
                                 <%= errors.email.msg %>
                             </p>
                             <% } %>
-                                <label for="password">Contraseña</label>
-                                <input type="password" name="password" id="contraseña" value="<%= locals.oldData ? oldData.password: null %>"required />
-                                <% if ( locals.errors && errors.password ) { %>
-                                    <p class="msg-error">
-                                        <%= errors.password.msg %>
-                                    </p>
-                                    <% } %>
-                    <button type="submit" id="login__boton">
-                        <h4>Ingresar</h4>
-                    </button>
 
-                    <article id="recordarme">
+                    <label for="password">Contraseña</label>
+                    <input type="password" name="password" id="contraseña" required value="<%= locals.oldData ? oldData.password: null %>"required />
+                    <% if ( locals.errors && errors.password ) { %>
+                        <p class="msg-error">
+                            <%= errors.password.msg %>
+                        </p>
+                    <% } %>
+
+                    <fieldset class="recordame-field">
+                        
+                        <input class="checkbox" type="checkbox" id="recordame" name="recordame">
+                        <label for="usuario">Recordarme</label>
+
+                    </fieldset>
+
+
+
+                    <button type="submit" id="login__boton">Ingresar</button>
+
+                    
                     <a href="">
                         <h4 id="recordarme__titulo">Recupera tu contraseña</h4>
                     </a>
 
-                    <label for="usuario">recordarme</label>
-                    <input class="checkbox" type="checkbox" id="retiro_local" name="envio"
-                    value="retiro_local">
+                    
                     </form>
-                </article>
-           
-                    <a href="/users/register" id="registro__boton">
-                        <h4 id="registro__textoBoton">Registrarme</h4>
-                    </a>
-                </article>
-            </section>
         </main>
 
         <%- include ('../includes/footer.ejs') %>

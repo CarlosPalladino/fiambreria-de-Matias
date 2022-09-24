@@ -5,22 +5,22 @@ const login =[
  //email
 body('email').notEmpty().withMessage('el email no puede quedar vacia').bail().custom(value=>{
     let users= index()
-    users= user.map(u=>u.email)
+    users= users.map(u=>u.email)
     if(!users.includes(value)){
-        throw new Error('el email es incorrecto')
+        throw new Error('El email es incorrecto')
 } return true 
 }
 ).bail(),
 // password
-body('password').notEmpty().withMessage('la contraseña no puede quedar vacia').bail().custom((value,{req})=>{
+body('password').notEmpty().withMessage('La contraseña no puede quedar vacia').bail().custom((value,{req})=>{
     let {email} = req.body
     let users= index()
     let user =users.find(u=>u.email === email)
     if(!user){
-        throw new error ('usuario no encontrado')
+        throw new Error('Usuario no encontrado')
     }
     if (!compareSync(value,user.password)){
-        throw new Error ('Las contraseñas no coinciden' )
+        throw new Error('Las contraseña es Incorrecta' )
     }
     return  true
 })

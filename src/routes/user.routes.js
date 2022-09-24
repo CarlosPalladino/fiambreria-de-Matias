@@ -1,17 +1,15 @@
 const {Router,}= require('express');
 const router = Router();
-const { create,process,login,logout,access }= require('../controllers/userController');
+const { login,logout,access }= require('../controllers/userController');
 const middlewaresLogin = require ('../middlewares/login')
 const isAdmin = require('../middlewares/isAdmin')
 const loginMiddlewares = require('../middlewares/logged')
 
-router.get('/create',create)
 
-router.post ('/create', process )
 
-router.get('/login',[loginMiddlewares],login)
+router.get('/login',login)
 
-router.post('/access',middlewaresLogin,access)
+router.post('/access',[loginMiddlewares],middlewaresLogin,access)
 
 router.get ('/logout',logout)
 
