@@ -1,4 +1,4 @@
-let recordarme = (req, res, next) => {
+let recordame = (req, res, next) => {
     if (req.cookies.recordarme1 != undefined && req.session.user != undefined) {
         let file = resolve(__dirname, '../data', 'users.json')
         let data = read.FileSync(file, { encoding: 'utf8' });

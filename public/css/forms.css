@@ -5,7 +5,8 @@
 }
 main{
     padding:30px 0;
-    background-color:#FFF0D4
+    background-color:#FFF0D4;
+    border-top: 2px solid #9C211C;
 }
 main form{
     width:100%;
@@ -77,4 +78,24 @@ main form button{
 }
 button:hover{
     opacity:0.7
+}
+
+.recordame-field{
+    display:flex;
+    border:none;
+    justify-content: center;
+    gap:10px;
+    align-items: center;
+    width: 60vw
+}
+.recordame-field input{
+    width:auto;
+    margin: 0 
+}
+.recordame-field label{
+    width:auto;
+    margin: 0 
+}
+p.msg-error{
+    color: red
 }
