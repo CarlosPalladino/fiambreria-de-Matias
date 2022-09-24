@@ -8,40 +8,72 @@
 
                 <form action="/products/edit/<%= product.id%>?m=PUT" method="POST" enctype="multipart/form-data">
                     <label for="name">Nombre del Producto</label>
-                    <input type="text" name="name" id="name" required value="<%= product.name %>">
+                    <input type="text" name="name" id="name"  
+                    value="<%= locals.oldData ? oldData.name: product.name %>">
+                    <% if ( locals.errors && errors.name ) { %>
+                        <p class="msg-error">
+                            <%= errors.name.msg %>
+                        </p>
+                        <% } %>
 
                     <label for="category">Categoría del Producto</label>
-                    <select name="category" id="category" required >
-                        <option value="Quesos" <%= product.category == "Quesos" ? "selected": null %>>QUESOS</option>
-                        <option value="Cocidos" <%= product.category == "Cocidos" ? "selected": null %>>COCIDOS</option>
-                        <option value="Jamon Crudo" <%= product.category == "Jamon Crudo" ? "selected": null %>>JAMON CRUDO</option>
-                        <option value="Salames y Salamines" <%= product.category == "Salames y Salamines" ? "selected": null %>>SALAMES Y SALAMINES</option>
-                        <option value="Pancetas" <%= product.category == "Pancetas" ? "selected": null %>>PANCETAS</option>
-                        <option value="Mortadelas" <%= product.category == "Mortadelas" ? "selected": null %>>MORTADELAS</option>
-                        <option value="Bondiola" <%= product.category == "Bondiola" ? "selected": null %>>BONDIOLA</option>
-                        <option value="Pancetas" <%= product.category == "Pancetas" ? "selected": null %>>PANCETAS</option>
+                    <select name="category" id="category"  >
+                        <option value="Quesos" <%= (locals.oldData && (oldData.category == "Quesos")) ? "selected" : product.category == "Quesos" ? "selected": null %>>QUESOS</option>
+                        <option value="Embutidos" <%=(locals.oldData && (oldData.category == "Embutidos")) ? "selected" : product.category == "Embutidos" ? "selected": null %>>EMBUTIDOS</option>
+                        <option value="Fiambres" <%=(locals.oldData && (oldData.category == "Fiambres")) ? "selected" : product.category == "Fiambres" ? "selected": null %>>FIAMBRES</option>
+                        <option value="Harinas" <%= (locals.oldData && (oldData.category == "Harinas")) ? "selected" :product.category == "Harinas" ? "selected": null %>>HARINAS</option>
+                        <option value="Dulces" <%=(locals.oldData && (oldData.category == "Dulces")) ? "selected" : product.category == "Dulces" ? "selected": null %>>DULCES</option>
+                        <option value="Otros" <%=(locals.oldData && (oldData.category == "Otros")) ? "selected" : product.category == "Otros" ? "selected": null %>>OTROS</option>
                     </select>
 
                     <label for="marca">Marca del Producto</label>
-                    <input type="text" name="marca" id="marca" required value="<%= product.marca %>">
+                    <input type="text" name="marca" id="marca"  value="<%= locals.oldData ? oldData.marca: product.marca %>">
+                    <% if ( locals.errors && errors.marca ) { %>
+                        <p class="msg-error">
+                            <%= errors.marca.msg %>
+                        </p>
+                        <% } %>
 
                     <label for="peso">Cuanto pesa el paquete cerrado en kg?(no escribir kg, solo el nro)</label>
-                    <input type="number" name="peso" id="peso" step="0.01" required value="<%= product.peso %>">
+                    <input type="number" name="peso" id="peso" step="0.01"  
+                    value="<%=locals.oldData ? oldData.peso:  product.peso %>">
+                    <% if ( locals.errors && errors.peso ) { %>
+                        <p class="msg-error">
+                            <%= errors.peso.msg %>
+                        </p>
+                        <% } %>
 
                     <label for="price">Precio del Producto, (no colocar el signo $, ni separador de miles)</label>
-                    <input type="number" name="price" id="price"  step="0.01" required value="<%= product.price %>">
+                    <input type="number" name="price" id="price"  step="0.01"  
+                    value="<%= locals.oldData ? oldData.price: product.price %>">
+                    <% if ( locals.errors && errors.price ) { %>
+                        <p class="msg-error">
+                            <%= errors.price.msg %>
+                        </p>
+                        <% } %>
 
                     <label for="description">Descripción del Producto</label>
-                    <textarea name="description" id="description" ><%= product.description %></textarea>
+                    <textarea name="description" id="description" >
+                        <%=locals.oldData ? oldData.description:  product.description %></textarea>
+                    <% if ( locals.errors && errors.description ) { %>
+                        <p class="msg-error">
+                            <%= errors.description.msg %>
+                        </p>
+                        <% } %>
 
                     <label for="destacado">Destacar Producto?</label>
-                    <select name="destacado" id="destacado" required >
-                        <option value="no" <%= product.destacado == false ? "selected": null %>>No</option>
-                        <option value="si" <%= product.destacado == true ? "selected": null %>>Si</option>
+                    <select name="destacado" id="destacado"  >
+                        <option value="no" <%= (locals.oldData && (oldData.destacado == false)) ? "selected" : product.destacado == false ? "selected": null %>>No</option>
+                        <option value="si" <%= (locals.oldData && (oldData.destacado == true)) ? "selected" : product.destacado == true ? "selected": null %>>Si</option>
                     </select>
 
-                    <label for="product-image">Imagen/es del Producto</label>
-                    <input type="file" name="product-image" id="product-image" multiple >
+                    <label for="image">Imagen/es del Producto</label>
+                    <input type="file" name="image" id="image" multiple >
+                    <% if ( locals.errors && errors.image ) { %>
+                        <p class="msg-error">
+                            <%= errors.image.msg %>
+                        </p>
+                        <% } %>
 
 
                     <button type="submit" id="btn">Actualizar Datos</button>

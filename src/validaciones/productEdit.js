@@ -2,7 +2,7 @@ let { body } = require('express-validator')
 const {extname,resolve} = require('path')
 const {unlinkSync} = require('fs')
 
-const productCreate = [
+const productEdit = [
     body("name")
         .notEmpty()
         .withMessage("Complete los campos")
@@ -48,10 +48,8 @@ const productCreate = [
 
     body('image').custom((value, { req }) => {
         let archivos = req.files
-        if (!archivos || archivos.length == 0) {
-            throw new Error('No se subio ninguna imagen')
-        }
-        let extensiones = ['.svg', '.png', '.jpg', '.jpeg', '.webp']
+        if (archivos || archivos.length > 0) {
+            let extensiones = ['.svg', '.png', '.jpg', '.jpeg', '.webp']
         let imagenProducto = archivos[0]
         let extension = extname(imagenProducto.filename)
 
@@ -66,8 +64,13 @@ const productCreate = [
         }
 
         return true
+            
+        } else{
+            return true
+        }
+        
     })
 
 
 ]
-module.exports = productCreate
+module.exports = productEdit

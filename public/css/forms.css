@@ -37,6 +37,9 @@ main form select{
 }
 
 main form textarea{
+    display:flex;
+    justify-content: flex-start;
+    align-items: flex-start;
     max-width: 700px;
     width:80vw;
     height: 150px;
@@ -55,6 +58,9 @@ main form input{
     width:100px
 }
 #price{
+    width:100px
+}
+#descuento{
     width:100px
 }
 #product-image{

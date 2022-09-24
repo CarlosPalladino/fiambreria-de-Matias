@@ -1,5 +1,6 @@
 const {index, one, create, write}= require("../models/productsModel")
 const {categorias, oneCat} = require('../models/catsModel')
+const { validationResult } = require('express-validator')
 const controller={ 
     todasCategorias:(req,res)=> {  //HAY QUE REQUERIR DESDE CATEGORIAS EL MODELO
         return res.render('products/todasCategorias',{
@@ -54,6 +55,17 @@ const controller={
         })
     },
     created: (req,res)=> {// LISTO
+      let validaciones = validationResult(req)
+      let { errors } = validaciones
+      if (errors && errors.length > 0) {
+
+          return res.render('products/create', {
+              title: 'Crear Producto',
+              styles: ["header","footer", "forms"],
+              oldData: req.body,
+              errors:validaciones.mapped()
+          });
+      }
         req.body.image = req.files.map(f=> f.filename);
         let newProduct = create(req.body)
         let products = index()

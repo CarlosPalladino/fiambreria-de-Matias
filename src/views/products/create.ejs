@@ -8,38 +8,78 @@
 
                 <form action="/products/created" method="POST" enctype="multipart/form-data">
                     <label for="name">Nombre del Producto</label>
-                    <input type="text" name="name" id="name" required placeholder="Ej.: Bondiola Serrana...">
+                    <input type="text" name="name" id="name"  placeholder="Ej.: Bondiola Serrana..."
+                    value="<%=locals.oldData?oldData.name:null%>">
+                    <% if ( locals.errors && errors.name ) { %>
+                        <p class="msg-error">
+                            <%= errors.name.msg %>
+                        </p>
+                        <% } %>
 
                     <label for="category">Categoría del Producto</label>
-                    <select name="category" id="category" required >
-                        <option value="Quesos">QUESOS</option>
-                        <option value="Embutidos">EMBUTIDOS</option>
-                        <option value="Fiambres">FIAMBRES</option>
-                        <option value="Harinas">HARINAS</option>
-                        <option value="Dulces">DULCES</option>
-                        <option value="Otros">OTROS</option>
+                    <select name="category" id="category"  >
+                        <option value="Quesos" <%= (locals.oldData && (locals.oldData.category =="Quesos"))? "selected": null %> >QUESOS</option>
+                        <option value="Embutidos" <%= (locals.oldData && (locals.oldData.category =="Embutidos"))? "selected": null %>>EMBUTIDOS</option>
+                        <option value="Fiambres" <%= (locals.oldData && (locals.oldData.category =="Fiambres"))? "selected": null %>>FIAMBRES</option>
+                        <option value="Harinas" <%= (locals.oldData && (locals.oldData.category =="Harinas"))? "selected": null %>>HARINAS</option>
+                        <option value="Dulces" <%= (locals.oldData && (locals.oldData.category =="Dulces"))? "selected": null %>>DULCES</option>
+                        <option value="Otros" <%= (locals.oldData && (locals.oldData.category =="Otros"))? "selected": null %>>OTROS</option>
                     </select>
 
                     <label for="marca">Marca del Producto</label>
-                    <input type="text" name="marca" id="marca" required placeholder="Ej.: Paladini...">
+                    <input type="text" name="marca" id="marca"  placeholder="Ej.: Paladini..."
+                    value="<%=locals.oldData?oldData.name:null%>">
+                    <% if ( locals.errors && errors.marca ) { %>
+                        <p class="msg-error">
+                            <%= errors.marca.msg %>
+                        </p>
+                        <% } %>
 
-                    <label for="peso">Cuanto pesa el paquete cerrado en kg?(no escribir kg, solo el nro)</label>
-                    <input type="number" name="peso" id="peso" step="0.01" required placeholder="Ej.:  1, 1.5, 5, 0.6...">
+                    <label for="peso">Cuanto pesa el paquete cerrado en kg?(no escribir kg, solo el nro, separar los decimales con punto(.))</label>
+                    <input type="number" name="peso" id="peso" step="0.01"  placeholder="Ej.:  1, 1.5, 5, 0.6..."
+                    value="<%=locals.oldData ? oldData.peso : null%>">
+                    <% if ( locals.errors && errors.peso ) { %>
+                        <p class="msg-error">
+                            <%= errors.peso.msg %>
+                        </p>
+                        <% } %>
 
-                    <label for="price">Precio del Producto, (no colocar el signo $, ni separador de miles)</label>
-                    <input type="number" name="price" id="price"  step="0.01" required placeholder="Ej.: 2500...">
+                    <label for="price">Precio del Producto, (no colocar el signo $, ni separador de miles, separar los decimales con punto(.))</label>
+                    <input type="number" name="price" id="price"  step="0.01"  placeholder="Ej.: 2500..."
+                    value="<%=locals.oldData ? oldData.price : null%>">
+                    <% if ( locals.errors && errors.price ) { %>
+                        <p class="msg-error">
+                            <%= errors.price.msg %>
+                        </p>
+                        <% } %>
 
                     <label for="description">Descripción del Producto</label>
-                    <textarea name="description" id="description" required placeholder=""></textarea>
+                    <textarea name="description" id="description"  placeholder="">
+                       <%=locals.oldData ? oldData.description : null%>
+                    </textarea>
+                    <% if ( locals.errors && errors.description ) { %>
+                        <p class="msg-error">
+                            <%= errors.description.msg %>
+                        </p>
+                        <% } %>
+
+                    <label for="descuento">Tiene descuento? (poner solo el porcentaje sin el %)</label>
+                    <input type="text" id="descuento" name="descuento" placeholder="Ej: 20..."
+                    calue="<%=locals.oldData ? oldData.descuento : null%>">
 
                     <label for="destacado">Destacar Producto?</label>
-                    <select name="destacado" id="destacado" required >
-                        <option value="no">No</option>
-                        <option value="si">Si</option>
+                    <select name="destacado" id="destacado"  >
+                        <option value="no" <%= (locals.oldData && (locals.oldData.category == false))? "selected": null %>>No</option>
+                        <option value="si" <%= (locals.oldData && (locals.oldData.category == true))? "selected": null %>>Si</option>
                     </select>
 
-                    <label for="product-image">Imagen/es del Producto</label>
-                    <input type="file" name="product-image" id="product-image" multiple required >
+                    <label for="image">Imagen/es del Producto</label>
+                    <input type="file" name="image" id="image" multiple  >
+                    <% if ( locals.errors && errors.image ) { %>
+                        <p class="msg-error">
+                            <%= errors.image.msg %>
+                        </p>
+                        <% } %>
 
 
                     <button type="submit" id="btn">Crear Producto</button>
@@ -47,9 +87,11 @@
             </section>
             
         </main>
+        <%-include('../includes/footer.ejs') %>
 
-        /* consultar por si quiere porcentaje de descuento */
+
         <script src="/scripts/forms.js"></script>
+
 
         </body>
 
