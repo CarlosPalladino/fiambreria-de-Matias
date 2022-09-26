@@ -12,23 +12,33 @@
                             <picture id="pic">
                                 <img src="/images/product-images/<%= product.images%>" alt="foto del producto" id="img">
                             </picture>
-                            <article id="product_info">
-                                <h2>
-                                    <%= product.name %>
-                                </h2>
-                                <h4 class="descuento">
-                                    <%= product.descuento %> % de descuento
-                                </h4>      <h4>
-                                    <%= product.peso %>kg
-                                </h4>
-                                <div id="precioDescuento">
-                                    <%let precioDesc= product.price - (product.price/100*product.descuento)%>
-                                    <h5 class="item-price">$<%= parseInt(precioDesc) %>,00</h5>
-                                    <h6>$<%=parseInt(product.price) %>,00</h6>
-                                </div>
-                          
+                            <ul id="productInfo">
+                                <li>
+                                    <h3>Nombre</h3>
+                                    <p>
+                                        <%=product.name%>
+                                    </p>
+                                </li>
+                                <li>
+                                    <h3>Marca</h3>
+                                    <p>
+                                        <%=product.marca%> </p>
+                                </li>
+                              <li>
+                             <h3>Descripcion</h3>
+<p>
+                                    <%=product.description%>
+                                    </p>
+                                </li>
+                            </ul> <div id="precioDescuento">
+                                        <%let precioDesc=product.price - (product.price/100*product.descuento)%>
+                                            <h5 class="item-price">$<%= parseInt(precioDesc) %>,00</h5>
+                                            <h6>$<%=parseInt(product.price) %>,00</h6>
+                                            <h4>
+                                                <%=product.peso %>kg
+                                            </h4>
 
-                            </article>
+                                    </div>
                         </article>
                     </section>
                 </div>

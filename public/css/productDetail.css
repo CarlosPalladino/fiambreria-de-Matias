@@ -40,6 +40,21 @@ main {
     flex-basis: 100%;
     object-fit: cover;
 }
+/*ul*/
+#productInfo{
+    list-style: none;
+}
+
+#productInfo li{
+    display: flex;
+    border-bottom: 3px #9C211C solid;
+    margin: 0.5em 0;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+
 /*detalle*/
 #product_info {
     text-align: center;
@@ -58,13 +73,18 @@ main {
     letter-spacing: 1px;
 }
 #precioDescuento{
+    background-color: #9C211C;
     display: flex;
-    gap: 10px;
-    justify-content: center;
     align-items: center;
+    /* justify-content: space-between; */
+    padding: 0.5em;
+    border-radius: 0.75em;
+    margin-top: 25px;
+    width: 100%;
 }
 
 #precioDescuento h6 {
     text-decoration: line-through;
     color: #39b54a;
 }
+
