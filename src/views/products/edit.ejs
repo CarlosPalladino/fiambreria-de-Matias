@@ -1,4 +1,5 @@
 <%-include('../includes/head.ejs') %>
+<body>
 
     <%- include('../includes/header.ejs') %>
 
@@ -61,6 +62,10 @@
                         </p>
                         <% } %>
 
+                    <label for="descuento">Tiene descuento? (poner solo el porcentaje sin el %)</label>
+                    <input type="number" id="descuento" name="descuento" placeholder="Ej: 20..."
+                    value="<%=locals.oldData ? oldData.descuento : product.descuento%>">
+
                     <label for="destacado">Destacar Producto?</label>
                     <select name="destacado" id="destacado"  >
                         <option value="no" <%= (locals.oldData && (oldData.destacado == false)) ? "selected" : product.destacado == false ? "selected": null %>>No</option>
@@ -84,6 +89,7 @@
             </section>
             
         </main>
+        <%- include('../includes/footer.ejs') %>
 
         /* consultar por si quiere porcentaje de descuento */
         <script src="/scripts/forms.js"></script>

@@ -2,8 +2,8 @@
   {
     "id": 1,
     "images": "fotomuestra.jpg",
-    "peso": "1.5",
-    "price": "2800.32",
+    "peso": 1.5,
+    "price": 2700,
     "destacado": false,
     "name": "Matambre de Pollo",
     "category": "Embutidos",
@@ -18,8 +18,8 @@
     "marca": "menganito",
     "images": "fotomuestra ",
     "category": "quesos",
-    "peso": "///",
-    "price": "///"
+    "peso": 2,
+    "price": 400
   }
  
   

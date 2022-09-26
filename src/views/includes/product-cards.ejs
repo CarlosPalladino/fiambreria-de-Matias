@@ -1,0 +1,27 @@
+<nav class="products-nav">
+    <% products.forEach(p => { %>
+        <article class="item-article">
+                
+            <a href="/products/detail/<%=p.id %>"><img class="item-image"
+                    src="/images/product-images/<%= p.images%>">
+
+
+            </a>
+            <h4 class="item-name"><%= p.name %> <%= p.peso %>kg - <%= p.marca.toUpperCase() %>   </h4>
+            <% if (p.descuento) { %>
+                <span class="descuento"><%=p.descuento%>% de descuento</span>
+                <div class="precio-descuento">
+                    
+                    <%let precioDesc= p.price - (p.price/100*p.descuento)%>
+                    <h5 class="item-price">$<%= parseInt(precioDesc) %>,00</h5>
+                    <h6>$<%=parseInt(p.price) %>,00</h6>
+                </div>
+             
+            <% } else{%>
+
+            <h4 class="item-price">$<%= p.price %> </h4>
+            <% } %>
+        </article>
+     
+    <% }) %>
+</nav>

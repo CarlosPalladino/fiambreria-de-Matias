@@ -14,13 +14,6 @@ main{
     padding-bottom:30px
 }
 
-.titular{
-    letter-spacing: 2px;
-    text-align: center;
-    color:#670606;
-    font-size: 18px;
-    font-weight: bold;
-}
 
 nav.contacto-nav{
     display: flex;
@@ -99,7 +92,7 @@ a.cat-carr{
 #categorias-carousel{
     margin: 10px auto;
     width: 100vw;
-    height: 200px;
+    height: 40vw;
     overflow: hidden;
     position:relative
 }
@@ -130,8 +123,8 @@ a.cat-carr{
     width: 1.5rem;
     z-index:3;
     position:absolute;
-    right: 3px;
-    top: 75px
+    right: 6px;
+    top: 14.5vw
 }
 #btn-prev{
     text-decoration:none;
@@ -146,8 +139,8 @@ a.cat-carr{
     width: 1.5rem;
     z-index:3;
     position:absolute;
-    left: 3px;
-    top: 75px
+    left: 6px;
+    top: 14.5vw
 }
 .active a{
     z-index:5

@@ -25,6 +25,7 @@ const model ={
             peso:parseFloat(data.peso),
             price: parseFloat(data.price),
             description: data.description,
+            descuento:data.descuento,
             destacado: data.destacado == "si"? true : false,
             image: data.image
         })

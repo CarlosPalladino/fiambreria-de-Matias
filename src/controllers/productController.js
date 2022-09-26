@@ -10,14 +10,43 @@ const controller={
         });
     },
     list: (req,res)=> { //LISTO
-        let productss = index();
+        let products = index();
+        let marcas= products.map(p => p.marca)
+        function unique(arr) { //con esta funcion filtramos por todas las marcas que haya pero que no se repitan
+          let result = [];
+        
+          for (let str of arr) {
+            if (!result.includes(str)) {
+              result.push(str);
+            }
+          }
+        
+          return result;
+        }
+        marcas = unique(marcas)
+        
         if(req.query && req.query.name){
-          products = productss.filter(product=> product.name.toLowerCase().indexOf(req.query.name.toLowerCase())> -1)
+           products = products.filter(product=> product.name.toLowerCase().indexOf(req.query.name.toLowerCase())> -1)
+        }
+        if(req.query && req.query.marca && req.query.marca != "todas"){
+          products = products.filter(product=> product.marca.toLowerCase().indexOf(req.query.marca.toLowerCase())> -1)
+        }
+        if(req.query && req.query.category && req.query.category != "todas"){
+          products = products.filter(product=> product.category.toLowerCase().indexOf(req.query.category.toLowerCase())> -1)
+        }
+        if (req.query && req.query.price){
+          if(req.query.price == "asc"){
+            products.sort((a,b)=> a.price - b.price)
+          } else{
+            products.sort((a,b)=> b.price -a.price)
+          }
         }
         return res.render("products/list",{
             title: "Nuestros Productos",
-            styles: ["header","footer" ],
-            products: products
+            styles: ["header","footer","list" ],
+            products: products,
+            marca:marcas,
+            categorias: categorias()
         })
     },   
     categoria: (req,res)=> { //LISTO
@@ -26,9 +55,7 @@ const controller={
         let productos = index()
          
         let pertenecen = productos.filter(e=>e.category.toLowerCase()== cat.name.toLowerCase())
-          console.log(cat)
-          console.log(productos)
-          console.log(pertenecen)
+          
           
         return res.render('products/categoria',{
             title:cat.name.toUpperCase(),
@@ -100,6 +127,7 @@ const controller={
                 p.peso = parseFloat(req.body.peso)
                 p.price = parseFloat(req.body.price)
                 p.description = req.body.description
+                p.descuento= req.body.descuento
                 p.destacado = req.body.destacado == "si"? true:false
                 if(req.files && req.files.length > 0){
                   product.image.forEach(img=>{

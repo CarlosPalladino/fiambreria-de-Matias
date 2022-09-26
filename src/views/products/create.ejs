@@ -64,8 +64,8 @@
                         <% } %>
 
                     <label for="descuento">Tiene descuento? (poner solo el porcentaje sin el %)</label>
-                    <input type="text" id="descuento" name="descuento" placeholder="Ej: 20..."
-                    calue="<%=locals.oldData ? oldData.descuento : null%>">
+                    <input type="number" id="descuento" name="descuento" placeholder="Ej: 20..."
+                    value="<%=locals.oldData ? oldData.descuento : null%>">
 
                     <label for="destacado">Destacar Producto?</label>
                     <select name="destacado" id="destacado"  >
