@@ -1,23 +1,17 @@
 main{
+    padding-bottom:30px;
     background-color: #FFF0D4;
-    padding-bottom:30px
-}
-.banner-categoria{
-    width:100%
-}
-.banner-categoria img{
-    width:100%
-}
-.return-nav {
-    padding:10px;
-    margin-bottom:15px
-}
-.return-nav a{
-    color:#9C211C;
-    text-decoration:none
 }
 
-/*ESTILOS PARA PRODUCT CARD*/
+.banner-list{
+    width:100%
+}
+.banner-list img{
+    width:100%
+}
+p{
+    display:inline
+}
 .products-nav{
     display: flex;
     flex-wrap: wrap;

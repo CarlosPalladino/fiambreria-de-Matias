@@ -1,0 +1,52 @@
+<%-include('../includes/head.ejs') %>
+<body>
+
+    <%- include('../includes/header.ejs') %>
+
+        <main>
+            <figure class="banner-list">
+                <img src="/images/banner-list.jpg" alt="" >
+             </figure>
+             <nav class="return-nav">
+                <a href="/"><i class="fa-solid fa-backward"></i> Home</a>
+            </nav>
+            <h2 class="titular">LISTADO DE PRODUCTOS</h2>
+             <form action="/products/" method="get">
+                
+                <label for="price">Filtrar por Precio:</label>
+                <select name="price" id="price">
+                    <option value="asc"><i class="fa-solid fa-arrow-up-9-1"></i> Ascendente</option>
+                    <option value="asc"><i class="fa-solid fa-arrow-down-9-1"></i> Descendente</option>
+                </select><br>
+                    
+                <label for="marca">Filtrar por Marca:</label>
+                <select name="marca" id="marca">
+                    <option value="todas">TODAS</option>
+                    <% locals.marca.forEach(m => { %>
+                        <option value="<%=m.toLowerCase()%>"><%= m.toUpperCase() %></option>
+                    
+                    <% }) %>
+                </select><br>
+
+                <label for="category">Filtrar por Categoria</label>
+                <select name="category" id="category">
+                    <option value="todas">TODAS</option>
+                    <% locals.categorias.forEach(c => { %>
+                        <option value="<%=c.name.toLowerCase()%>"><%= c.name.toUpperCase() %></option>
+                    
+                    <% }) %>
+                </select><br>
+
+                 <button type="reset" class="reset-btn">Borrar Seleccion</button>
+                 <button type="submit" class="filter-btn">Aplicar Filtros</button>
+            </form>
+            <%- include('../includes/product-cards.ejs') %>
+
+            <% if (products.length == 0) { %>
+                <h3>No se encontraron coincidencias con su busqueda, pruebe nuevamente</h3>
+            <% } %>
+        </main>
+        <%- include('../includes/footer.ejs') %>
+        
+</body>
+</html>
