@@ -22,25 +22,39 @@
                                 <li>
                                     <h3>Marca</h3>
                                     <p>
-                                        <%=product.marca%> </p>
-                                </li>
-                              <li>
-                             <h3>Descripcion</h3>
-<p>
-                                    <%=product.description%>
+                                        <%=product.marca%>
                                     </p>
                                 </li>
-                            </ul> <div id="precioDescuento">
+                                <li>
+                                    <h3>Precio</h3>
+
+                                    <div id="precioDescuento">
                                         <%let precioDesc=product.price - (product.price/100*product.descuento)%>
                                             <h5 class="item-price">$<%= parseInt(precioDesc) %>,00</h5>
                                             <h6>$<%=parseInt(product.price) %>,00</h6>
-                                            <h4>
-                                                <%=product.peso %>kg
-                                            </h4>
 
-                                    </div>
+
+                                </li>
+                                <li>
+                                    <h3>Kg</h3>
+                                    <p>
+                                        <%=product.peso %>
+                                    </p>
+                                </li>
+
+
+                            </ul>
+
+                            <section class="detalles">
+                                <h3>Descripcion del producto</h3>
+                                <p>
+                                    <%=product.description%>
+                                </p>
+                            </section>
                         </article>
-                    </section>
+                </div>
+
+                </section>
                 </div>
 
             </main>
