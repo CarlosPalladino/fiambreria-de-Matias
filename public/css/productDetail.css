@@ -49,11 +49,18 @@ main {
     display: flex;
     border-bottom: 3px #9C211C solid;
     margin: 1.5em 0;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    gap:15px;
 
+} 
+#productInfo li h3{
+    font-size: 16px;
+    
 }
-
+#productInfo li p {
+    font-size:14px;
+}
 
 /*detalle*/
 #product_info {
@@ -75,9 +82,9 @@ main {
 #precioDescuento{
     display: flex;
     align-items: center;
-  justify-content: space-between; 
-
+    justify-content: flex-end;
     width: 100%;
+    gap: 25px;
 }
 
 #precioDescuento h6 {

@@ -29,7 +29,7 @@ const userController = {
         req.session.user = user;
         
         if (req.body.recordame != undefined) {
-            res.cookie("recordame", user.email / id, { maxAge: 172800000 })
+            res.cookie("recordame", user.email , { maxAge: 172800000 })
         }
         return res.redirect("/")
     },
