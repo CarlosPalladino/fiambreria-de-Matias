@@ -1,40 +1,63 @@
 <header>
+    <div class="header-mobile">
+        <nav class="burger-menu">
+            <a href="#burger-menu">
+                <i class="fas fa-bars"></i>
+            </a>
+        </nav>
+        <nav id="burger-menu">
+            <a href="#">Cerrar</a>
+            <a href="/">INICIO</a>
+            <a href="/contacto">CONTACTO</a>
+            <a href="/products/categorias">NUESTROS PRODUCTOS</a>
+            <a href="/products/">LISTADO DE PRODUCTOS</a>
+            <a href="/files/listado-precios/prueba-1.xls" download="Listado Agosto 2022.xls">DESCARGAR
+                LISTA DE PRECIOS</a>
+        </nav>
+    
+    <% if (user&&user.isAdmin) { %>
+     
+    
+        <a href="/products/create"><i class="fa-sharp fa-solid fa-plus navbarLinks"></i></a>
+    
+    
+    
+        <a href="/users/logout" class="navbarLinks" type="submit">Cerrar
+            sesión</a>
+    <% } %>
+        <form action="/products/" method="get" class="search-form">
+            <input type="text" name="name" id="name"  placeholder="Buscar Productos">
+            <button type="submit" class="boton-buscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+    
+    
+    
+        <nav class="logo-nav">
+            <a href="/"><img src="/images/logo.png" id="logo">
+            </a>
+        </nav>
+
+    </div>
     <!---->
-    <nav class="burger-menu">
-        <a href="#burger-menu">
-            <i class="fas fa-bars"></i>
-        </a>
-    </nav>
-    <nav id="burger-menu">
-        <a href="#">Cerrar</a>
+    
+    
+    <div class="header-top-bar">
+        <nav class="logo-nav">
+            <a href="/"><img src="/images/logo.png" id="logo">
+            </a>
+        </nav>
+        <form action="/products/" method="get" class="search-form">
+            <input type="text" name="name" id="name"  placeholder="Buscar Productos">
+            <button type="submit" class="boton-buscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+    </div>
+    <nav class="header-bottom-bar">
         <a href="/">INICIO</a>
-        <a href="/contacto">CONTACTO</a>
-        <a href="/products/categorias">NUESTROS PRODUCTOS</a>
+        <a href="/products/categorias">CATEGORIAS</a>
         <a href="/products/">LISTADO DE PRODUCTOS</a>
-        <a class="downloud" href="/files/listado-precios/prueba-1.xls" download="Listado Agosto 2022.xls">DESCARGAR
-            LISTA DE PRECIOS</a>
+        <a href="/contacto">CONTACTO</a>
+        
     </nav>
-
-<% if (user&&user.isAdmin) { %>
- 
-
-    <a href="/products/create"><i class="fa-sharp fa-solid fa-plus navbarLinks"></i></a>
-
-
-
-    <a href="/users/logout" class="navbarLinks" type="submit">Cerrar
-        sesión</a>
-<% } %>
-    <form action="/products/" method="get" class="search-form">
-        <input type="text" name="name" id="name"  placeholder="Buscar Productos">
-        <button type="submit" class="boton-buscar"><i class="fa-solid fa-magnifying-glass"></i></button>
-    </form>
-
-
-
-    <nav class="logo-nav">
-        <a href="/"><img src="/images/logo.png" id="logo">
-        </a>
-    </nav>
+    
 
 </header>

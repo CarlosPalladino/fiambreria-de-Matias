@@ -9,6 +9,17 @@ body{
     transition: all 500ms ease-in-out;
 }
 header{
+    width:100vw;
+    background-color:#FFF0D4 
+    
+}
+.header-top-bar{
+    display:none
+}
+.header-bottom-bar{
+    display:none
+}
+.header-mobile{
     padding: 5px;
     gap: 10px;
     width:100vw;
@@ -18,7 +29,7 @@ header{
     align-items: center;
     justify-content: space-between;
     background-color:#FFF0D4 ;
-    
+
 }
 
 .search-form{
@@ -52,9 +63,16 @@ header{
     border-bottom-right-radius: 50px;
 
     padding: 3px;
-    background-color: #9C211C
+    background-color: #9C211C;
+    cursor:pointer;
+    opacity:1;
+    transition: all 0.2s ease;
+}
+.search-form button:hover{
+    opacity:0.7
+}
 
-}.search-form button i{
+.search-form button i{
     font-size: 18px
 }
 
@@ -162,4 +180,71 @@ text-align: center
 .return-nav a{
     color:#9C211C;
     text-decoration:none
+}
+
+@media(min-width:768px){
+    
+    .burger-menu a{
+        width:40px;
+        height:40px;
+        padding-top:9px;
+        font-size: 20px;
+        
+    }
+    .search-form{
+        height:40px
+    }
+    .search-form input{
+        width:250px
+    }
+}
+@media(min-width:1024px){
+    .header-mobile{
+        display:none
+    }
+
+    .header-top-bar{
+    padding: 15px;
+    gap: 10px;
+    max-width:1024px;
+    margin:auto;
+    
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color:#FFF0D4 ;
+    }
+    .logo-nav{
+        flex-basis:auto
+    }
+    #logo{
+        height:80px;
+        width:80px
+    }
+    .search-form button{
+        width:40px
+    }
+    .search-form input{
+        width:350px
+    }
+    .header-bottom-bar{
+        display:flex;
+        justify-content: space-evenly;
+        gap:30px;
+        height:50px;
+        max-width:1024px;
+        margin:auto
+    }
+    .header-bottom-bar a{
+        text-decoration: none;
+        color:#670606;
+        transition: all 0.2s ease;
+
+    }
+    .header-bottom-bar a:hover{
+        font-size:18px;
+        font-weight: 600;
+
+    }
 }
